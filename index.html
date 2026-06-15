@@ -44,9 +44,10 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 @media(max-width:760px){.g2,.g3,.g4{grid-template-columns:1fr}}
 .field.full{grid-column:1/-1}
 .item{border:1px solid var(--border);border-radius:9px;padding:14px;margin-bottom:12px;background:var(--surface2)}
+.item .grid{margin-bottom:10px}.item .grid:last-child{margin-bottom:0}
 .item-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
 .chip{display:inline-flex;align-items:center;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--brand);color:#fff;flex:none}
-.code-input{max-width:120px}.lvl-input{max-width:80px}.w-input{max-width:90px}
+.code-input{max-width:130px}.lvl-input{max-width:80px}.w-input{max-width:90px}
 .checks{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
 .checks label{display:inline-flex;align-items:center;gap:6px;margin:0;padding:5px 10px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-weight:600;color:var(--text);cursor:pointer;font-size:12.5px}
 .checks label:hover{background:#eef0ef}.checks input{width:auto;margin:0}
@@ -92,29 +93,25 @@ tr.exam td{background:var(--yellowBg)}
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:#222;color:#fff;padding:11px 18px;border-radius:10px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 8px 30px rgba(0,0,0,.25)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .footer{max-width:1320px;margin:0 auto;padding:10px 20px 40px;color:var(--faint);font-size:12.5px;text-align:center}
-#rps-doc{background:#fff;color:#111;border:1px solid var(--border);border-radius:8px;padding:26px;font-family:"Times New Roman",Georgia,serif;font-size:11.5px;line-height:1.4;box-shadow:var(--shadow)}
-#rps-doc .secttl{text-align:center;font-size:13px;font-weight:700;margin:18px 0 8px;text-transform:uppercase}
-#rps-doc .inst{text-align:center;font-size:12.5px;font-weight:700;line-height:1.3}
+#rps-doc{background:#fff;color:#111;border:1px solid var(--border);border-radius:8px;padding:26px;font-family:"Times New Roman",Georgia,serif;font-size:11px;line-height:1.4;box-shadow:var(--shadow)}
+#rps-doc .secttl{text-align:center;font-size:13px;font-weight:700;margin:16px 0 8px;text-transform:uppercase}
 #rps-doc table{width:100%;border-collapse:collapse;margin:6px 0}
 #rps-doc table,#rps-doc th,#rps-doc td{border:1px solid #000}
 #rps-doc th,#rps-doc td{padding:4px 6px;vertical-align:top;text-align:left}
 #rps-doc th{background:#e9e9e9;text-align:center;font-weight:700}
 #rps-doc .c{text-align:center}#rps-doc .sec{background:#dde9e1;font-weight:700}#rps-doc .muted{color:#777}
-#rps-doc .aibox{border:1.5px solid #000;padding:7px 10px;margin:7px auto;text-align:center;max-width:90%}
+#rps-doc i{font-style:italic}
+#rps-doc table.nb,#rps-doc table.nb td,#rps-doc table.nb th{border:none}
+#rps-doc table.inner,#rps-doc table.inner td{border:1px solid #000}
+#rps-doc .aibox{border:1.5px solid #000;padding:7px 10px;margin:7px auto;text-align:center;max-width:92%}
 #rps-doc .aiarrow{text-align:center;font-size:15px;margin:2px 0}
-#rps-doc .airow{display:flex;gap:8px;justify-content:center;margin:7px 0}
-#rps-doc .airow .aibox{margin:0;flex:1}
-#rps-doc .cover{text-align:center;padding:40px 0;border:2px solid #000;margin-bottom:8px}
-#rps-doc .subttl{font-weight:700;margin:9px 0 3px;font-size:11.5px}
-#rps-doc .kop2{text-align:center;line-height:1.35;font-size:11px;margin-bottom:2px}
-#rps-doc hr{border:none;border-top:1px solid #888;margin:3px 0 8px}
+#rps-doc .cover{text-align:center;padding:40px 14px;border:2px solid #000;margin-bottom:8px;min-height:520px}
+#rps-doc hr{border:none;border-top:1px solid #555;margin:3px 0 8px}
 #rps-doc .box{border:1px solid #000;padding:6px 8px;margin:2px 0}
 #rps-doc table.wk{font-size:8px}
 #rps-doc table.wk td,#rps-doc table.wk th{padding:3px 4px}
 #rps-doc table.idt th{text-align:left}
 #rps-doc table.idt th.c{text-align:center}
-#rps-doc .kop{display:flex;align-items:center;gap:14px;border-bottom:2px solid #000;padding-bottom:6px;margin-bottom:6px}
-#rps-doc .kop img{height:64px}#rps-doc .kop .inst{flex:1;text-align:center}
 #rps-doc ol,#rps-doc ul{margin:3px 0;padding-left:18px}
 #rps-doc .pgbreak{page-break-before:always}
 @media print{.topbar,.tabbar,.doc-toolbar,.footer{display:none!important}body{background:#fff}.wrap{padding:0;max-width:none}.view{display:none!important}#view-preview{display:block!important}.card{box-shadow:none;border:none;padding:0;margin:0}#rps-doc{border:none;box-shadow:none;padding:0;font-size:8.5px}#rps-doc .pgbreak{page-break-before:always}@page{size:A4 portrait;margin:12mm}}
@@ -135,7 +132,7 @@ tr.exam td{background:var(--yellowBg)}
   <button class="tab" data-view="profil">1 · Profil & CPL</button>
   <button class="tab" data-view="cpmk">CPMK & Sub-CPMK</button>
   <button class="tab" data-view="materi">Materi & Pustaka</button>
-  <button class="tab" data-view="pemetaan">🔗 Pemetaan & Bobot</button>
+  <button class="tab" data-view="pemetaan">🔗 Pemetaan</button>
   <button class="tab" data-view="analisis">2 · Analisis Instr.</button>
   <button class="tab" data-view="mingguan">3 · Mingguan</button>
   <button class="tab" data-view="kegiatan">4 · Kegiatan</button>
@@ -150,43 +147,42 @@ tr.exam td{background:var(--yellowBg)}
 </div></div>
 <div class="wrap">
 
-<!-- IDENTITAS -->
 <section class="view active" id="view-identitas">
-  <div class="card"><h2>Identitas & Kop Dokumen</h2><p class="hint">Data ini muncul pada kop RPS, kontrak, dan seluruh dokumen.</p>
+  <div class="card"><h2>Identitas & Kop Dokumen</h2><p class="hint">Data ini muncul pada sampul, kop RPS, kontrak, dan seluruh dokumen.</p>
    <div class="logo-drop" style="margin-bottom:16px">
      <div class="logo-prev" id="logoPrev">Logo</div>
-     <div><label>Logo Institusi (PNG/JPG)</label><input type="file" id="logoInput" accept="image/*"><div class="helprow" style="margin-top:5px">Tampil pada kop RPS & Kontrak. <button class="danger mini" id="logoClear">Hapus logo</button></div></div>
+     <div><label>Logo Institusi (PNG/JPG)</label><input type="file" id="logoInput" accept="image/*"><div class="helprow" style="margin-top:5px">Tampil pada sampul, kop RPS & Kontrak. <button class="danger mini" id="logoClear">Hapus logo</button></div></div>
    </div>
    <div class="grid g2">
-    <div class="field"><label>Kementerian / Lembaga</label><input id="f_kementerian" placeholder="Kementerian Pendidikan Tinggi, Sains, dan Teknologi"></div>
+    <div class="field"><label>Kementerian / Lembaga</label><input id="f_kementerian" placeholder="Kementerian Pendidikan dan Kebudayaan"></div>
     <div class="field"><label>Perguruan Tinggi</label><input id="f_pt" placeholder="Universitas Siliwangi"></div>
     <div class="field"><label>Fakultas</label><input id="f_fakultas" placeholder="Fakultas Agama Islam"></div>
     <div class="field"><label>Program Studi</label><input id="f_prodi" placeholder="Manajemen Mutu Halal"></div>
     <div class="field full"><label>Alamat Institusi</label><input id="f_alamat" placeholder="Jl. Siliwangi No. 24 Kota Tasikmalaya"></div>
-    <div class="field"><label>Nama Mata Kuliah</label><input id="f_namaMK" placeholder="Pariwisata Halal"></div>
-    <div class="field"><label>Nama MK (English)</label><input id="f_namaMKen" placeholder="Halal Tourism"></div>
-    <div class="field"><label>Kode Mata Kuliah</label><input id="f_kodeMK" placeholder="KJ80206401"></div>
+    <div class="field"><label>Nama Mata Kuliah</label><input id="f_namaMK" placeholder="Dasar-dasar Manajemen"></div>
+    <div class="field"><label>Nama MK (English)</label><input id="f_namaMKen" placeholder="Fundamentals of Management"></div>
+    <div class="field"><label>Kode Mata Kuliah</label><input id="f_kodeMK" placeholder="KJ80206001"></div>
     <div class="field"><label>Kode Dokumen</label><input id="f_kodeDokumen" placeholder=""></div>
-    <div class="field"><label>No. Revisi</label><input id="f_noRevisi" placeholder="00"></div>
-    <div class="field"><label>Tgl Revisi</label><input id="f_tglRevisi" placeholder=""></div>
+    <div class="field"><label>Penyusun (untuk Sampul)</label><input id="f_penyusun" placeholder="Listia Andani, M.E."></div>
+    <div class="field"><label>Tahun (Sampul)</label><input id="f_tahun" placeholder="2024"></div>
     <div class="field"><label>Rumpun / Kelompok MK</label><input id="f_rumpun" placeholder="Mata Kuliah Program Studi"></div>
-    <div class="field"><label>SKS Teori</label><input id="f_sksT" type="number" min="0" placeholder="3"></div>
-    <div class="field"><label>SKS Praktikum</label><input id="f_sksP" type="number" min="0" placeholder="0"></div>
-    <div class="field"><label>Semester</label><input id="f_semester" placeholder="4 (Genap)"></div>
-    <div class="field"><label>Tanggal Penyusunan</label><input id="f_tglSusun" placeholder="19 Januari 2026"></div>
+    <div class="field"><label>SKS Teori (T)</label><input id="f_sksT" type="number" min="0" placeholder="3"></div>
+    <div class="field"><label>SKS Praktikum (P)</label><input id="f_sksP" type="number" min="0" placeholder="0"></div>
+    <div class="field"><label>Semester</label><input id="f_semester" placeholder="1"></div>
+    <div class="field"><label>Tanggal Penyusunan</label><input id="f_tglSusun" placeholder="Juli 2024"></div>
     <div class="field"><label>Jumlah Minggu Efektif</label><input id="f_minggu" type="number" min="1" placeholder="16"></div>
-    <div class="field full"><label>Mata Kuliah Prasyarat</label><input id="f_prasyarat" placeholder="—"></div>
+    <div class="field"><label>Mata Kuliah Prasyarat</label><input id="f_prasyarat" placeholder="-"></div>
    </div>
   </div>
   <div class="card"><h2>Beban Belajar (SN-Dikti)</h2><p class="hint">Dihitung otomatis: 1 SKS = 50' tatap muka + 60' tugas terstruktur + 60' belajar mandiri per minggu.</p>
    <div class="statgrid" id="bebanGrid"></div>
   </div>
-  <div class="card"><h2>Otorisasi / Pengesahan</h2><p class="hint">Empat kolom tanda tangan pada kop RPS.</p>
+  <div class="card"><h2>Otorisasi / Pengesahan</h2><p class="hint">Tiga kolom tanda tangan pada kop RPS (Dosen Pengembang, Koordinator RMK, Ketua Prodi). Unit Penjaminan Mutu opsional.</p>
    <div class="grid g4">
     <div class="field"><label>Dosen Pengembang RPS</label><input id="f_dosenPengembang" placeholder="Nama & gelar"></div>
     <div class="field"><label>Koordinator RMK</label><input id="f_koordinator" placeholder="Nama & gelar"></div>
-    <div class="field"><label>Unit Penjaminan Mutu</label><input id="f_unitMutu" placeholder="Nama & gelar"></div>
     <div class="field"><label>Ketua Program Studi</label><input id="f_kaprodi" placeholder="Nama & gelar"></div>
+    <div class="field"><label>Unit Penjaminan Mutu (opsional)</label><input id="f_unitMutu" placeholder="Nama & gelar"></div>
    </div>
   </div>
   <div class="card"><h2>Deskripsi & Pendekatan</h2>
@@ -194,42 +190,39 @@ tr.exam td{background:var(--yellowBg)}
     <div class="field full"><label>Deskripsi Singkat MK (Indonesia)</label><textarea id="f_deskripsiID" rows="4"></textarea></div>
     <div class="field full"><label>Course Description (English)</label><textarea id="f_deskripsiEN" rows="4"></textarea></div>
     <div class="field"><label>Pendekatan / Teori Belajar</label><input id="f_pendekatan" placeholder="Konstruktivisme"></div>
-    <div class="field"><label>Media / Platform Pembelajaran</label><input id="f_media" placeholder="WhatsApp Group, Google Classroom"></div>
-    <div class="field full"><label>Dosen Pengampu (pisahkan dengan koma)</label><input id="f_pengampu" placeholder="Dosen A, Dosen B"></div>
+    <div class="field"><label>Media / Platform Pembelajaran</label><input id="f_media" placeholder="WhatsApp Group (WAG)"></div>
+    <div class="field full"><label>Dosen Pengampu (pisahkan dengan koma)</label><input id="f_pengampu" placeholder="Listia Andani, M.E."></div>
    </div>
   </div>
 </section>
 
-<!-- PROFIL & CPL -->
 <section class="view" id="view-profil">
   <div class="card"><h2><span class="n">1A</span>Profil Lulusan</h2><p class="hint">Profil lulusan program studi yang didukung mata kuliah ini.</p>
    <div id="list-profil"></div>
    <div class="row-add"><button class="sub mini" id="add-profil">+ Tambah Profil</button></div>
   </div>
-  <div class="card"><h2><span class="n">1B</span>Capaian Pembelajaran Lulusan (CPL)</h2><p class="hint">CPL yang dibebankan pada mata kuliah, dikelompokkan menurut kompetensi (Sikap, Pengetahuan, Keterampilan Umum/Khusus).</p>
+  <div class="card"><h2><span class="n">1B</span>Capaian Pembelajaran Lulusan (CPL / PLO)</h2><p class="hint">CPL/PLO yang dibebankan pada mata kuliah, dikelompokkan menurut <b>Kompetensi</b>: Attitude, General Skills, Knowledge, Specific Skills. Kode contoh: PLO 1, PLO 2, dst.</p>
    <div id="list-cpl"></div>
-   <div class="row-add"><button class="sub mini" id="add-cpl">+ Tambah CPL</button></div>
+   <div class="row-add"><button class="sub mini" id="add-cpl">+ Tambah CPL/PLO</button></div>
   </div>
 </section>
 
-<!-- CPMK & SUB -->
 <section class="view" id="view-cpmk">
-  <div class="callout"><span class="ic">💡</span><div>Alur OBE: <b>CPL → CPMK → Sub-CPMK</b>. Setiap CPMK menjabarkan CPL; tiap Sub-CPMK adalah kemampuan akhir tahap yang menjadi dasar penilaian. Isi <b>bobot CPMK</b> agar ketercapaian CPMK dapat dihitung. Gunakan tab <b>KKO</b> untuk memilih kata kerja.</div></div>
+  <div class="callout"><span class="ic">💡</span><div>Alur OBE: <b>CPL → CPMK → Sub-CPMK</b>. Setiap CPMK menjabarkan CPL; tiap Sub-CPMK adalah kemampuan akhir tahap yang menjadi dasar penilaian. Gunakan tab <b>KKO</b> untuk memilih kata kerja.</div></div>
   <div class="card"><h2>Capaian Pembelajaran Mata Kuliah (CPMK)</h2>
    <div id="list-cpmk"></div>
    <div class="row-add"><button class="sub mini" id="add-cpmk">+ Tambah CPMK</button></div>
-   <div class="totbar">Total bobot CPMK: <span id="cpmk-total" class="badge">0%</span><span class="helprow">Idealnya 100%.</span></div>
+   <div class="totbar">Total bobot CPMK: <span id="cpmk-total" class="badge">0%</span><span class="helprow">Idealnya 100% (opsional).</span></div>
   </div>
-  <div class="card"><h2>Sub-CPMK (Kemampuan Akhir tiap Tahapan)</h2><p class="hint">Sub-CPMK dipakai pada matriks Metode (5), Penilaian (7), rubrik, dan dipetakan ke minggu pembelajaran.</p>
+  <div class="card"><h2>Sub-CPMK (Kemampuan Akhir tiap Tahapan)</h2><p class="hint">Sub-CPMK dipakai pada matriks Metode (5), Penilaian (7), rubrik, dan dipetakan ke minggu pembelajaran. Sertakan kode ranah pada rumusan, mis. (C.2; C.3).</p>
    <div id="list-sub"></div>
    <div class="row-add"><button class="sub mini" id="add-sub">+ Tambah Sub-CPMK</button></div>
   </div>
 </section>
 
-<!-- MATERI & PUSTAKA -->
 <section class="view" id="view-materi">
-  <div class="card"><h2>Bahan Kajian / Materi Pembelajaran</h2>
-   <div id="list-bahan" class="simple-list"></div>
+  <div class="card"><h2>Bahan Kajian / Materi Pembelajaran</h2><p class="hint">Materi dwibahasa (Indonesia & Inggris) seperti format RPS.</p>
+   <div id="list-bahan"></div>
    <div class="row-add"><button class="sub mini" id="add-bahan">+ Tambah Bahan Kajian</button></div>
   </div>
   <div class="card"><h2>Pustaka Utama</h2>
@@ -241,19 +234,18 @@ tr.exam td{background:var(--yellowBg)}
    <div class="row-add"><button class="sub mini" id="add-pBuku">+ Tambah Pustaka Pendukung</button></div>
   </div>
 </section>
-<!-- PEMETAAN -->
+
 <section class="view" id="view-pemetaan">
-  <div class="callout"><span class="ic">🔗</span><div>Matriks ini dibuat otomatis dari relasi yang Anda isi (CPMK→CPL dan Sub→CPMK). Gunakan untuk memastikan tidak ada CPL/CPMK yang “yatim”. Centang ✓ menandakan keterkaitan.</div></div>
+  <div class="callout"><span class="ic">🔗</span><div>Matriks dibuat otomatis dari relasi yang Anda isi (CPMK→CPL dan Sub→CPMK). Centang ✓ menandakan keterkaitan.</div></div>
   <div class="card"><h2><span class="n">M1</span>Matriks CPL × CPMK</h2><div class="tablewrap"><table class="builder" id="mx-cpl-cpmk"></table></div></div>
   <div class="card"><h2><span class="n">M2</span>Matriks CPMK × Sub-CPMK</h2><div class="tablewrap"><table class="builder" id="mx-cpmk-sub"></table></div></div>
-  <div class="card"><h2><span class="n">M3</span>Pemetaan Bobot Penilaian → CPMK</h2><p class="hint">Distribusikan bobot tiap Sub-CPMK (dari tabel mingguan) ke CPMK induknya, lalu lihat ketercapaian bobot tiap CPMK — inti laporan OBE.</p>
+  <div class="card"><h2><span class="n">M3</span>Pemetaan Bobot Penilaian → CPMK</h2><p class="hint">Distribusi bobot tiap Sub-CPMK (dari tabel mingguan) ke CPMK induknya.</p>
    <div class="tablewrap"><table class="builder" id="mx-bobot-cpmk"></table></div>
   </div>
 </section>
 
-<!-- ANALISIS INSTRUKSIONAL (fleksibel) -->
 <section class="view" id="view-analisis">
-  <div class="callout"><span class="ic">🧩</span><div>Susun bagan sesuai kebutuhan mata kuliah: tambah <b>Tahap</b> (berisi satu atau beberapa kotak yang sejajar) atau <b>Pembatas</b> (mis. UTS/UAS). Urutan dari <b>bawah ke atas</b> menuju capaian puncak. Geser dengan tombol ▲/▼.</div></div>
+  <div class="callout"><span class="ic">🧩</span><div>Susun bagan: tambah <b>Tahap</b> (berisi satu/beberapa kotak) atau <b>Pembatas</b> (UTS/UAS). Urutan dari <b>atas (dekat capaian) ke bawah (fondasi)</b>. Geser dengan ▲/▼.</div></div>
   <div class="card"><h2><span class="n">2</span>Capaian Puncak Mata Kuliah</h2><textarea id="f_aiCapaian" rows="2" placeholder="Kemampuan akhir tertinggi yang dituju mata kuliah…"></textarea></div>
   <div class="card"><h2>Tahapan Bagan</h2><p class="hint">Daftar tahap/pembatas dari atas (dekat capaian) ke bawah (fondasi).</p>
    <div id="ai-rows"></div>
@@ -261,50 +253,43 @@ tr.exam td{background:var(--yellowBg)}
   </div>
 </section>
 
-<!-- MINGGUAN -->
 <section class="view" id="view-mingguan">
-  <div class="card"><h2><span class="n">3</span>Rencana Pembelajaran Mingguan</h2><p class="hint">Inti tabel RPS. Centang “Ujian” untuk menandai minggu UTS/UAS. Estimasi waktu (TM/PT/BM) mengikuti SKS. Total bobot sebaiknya 100%.</p>
+  <div class="card"><h2><span class="n">3</span>Rencana Pembelajaran Mingguan</h2><p class="hint">Inti tabel RPS. Centang “Ujian” untuk menandai minggu UTS/UAS. Materi dwibahasa.</p>
    <div class="row-add" style="margin-bottom:10px"><button class="sub mini" id="week-sync">↻ Setel ulang jumlah minggu</button><span class="helprow">Mengikuti “Jumlah Minggu Efektif” pada Identitas.</span></div>
    <div class="tablewrap"><table class="builder"><thead><tr>
-     <th style="width:34px">Mg</th><th style="width:140px">Sub-CPMK</th><th style="width:140px">Indikator</th><th style="width:130px">Kriteria & Bentuk</th><th style="width:120px">Metode (Luring)</th><th style="width:110px">Metode (Daring)</th><th style="width:90px">Estimasi Waktu</th><th style="width:140px">Materi</th><th style="width:55px">Bobot %</th><th style="width:44px">Ujian</th>
+     <th style="width:34px">Mg</th><th style="width:140px">Sub-CPMK</th><th style="width:130px">Indikator</th><th style="width:120px">Kriteria & Bentuk</th><th style="width:110px">Metode (Luring)</th><th style="width:100px">Metode (Daring)</th><th style="width:130px">Materi (ID)</th><th style="width:120px">Materi (EN)</th><th style="width:55px">Bobot %</th><th style="width:44px">Ujian</th>
    </tr></thead><tbody id="tbody-weeks"></tbody></table></div>
    <div class="totbar">Total bobot: <span id="week-total" class="badge">0%</span><span class="helprow">Idealnya 100%.</span></div>
   </div>
 </section>
 
-<!-- KEGIATAN -->
 <section class="view" id="view-kegiatan">
-  <div class="card"><h2><span class="n">4</span>Rencana Kegiatan Pembelajaran per Pertemuan</h2><p class="hint">Penjabaran aktivitas tiap pertemuan: kemampuan akhir, topik, bahan ajar & aktivitas, referensi.</p>
-   <div class="tablewrap"><table class="builder"><thead><tr>
-     <th style="width:38px">Ke-</th><th style="width:170px">Kemampuan Akhir</th><th style="width:160px">Topik / Pokok Bahasan</th><th style="width:230px">Bahan Ajar & Aktivitas</th><th style="width:130px">Referensi</th>
-   </tr></thead><tbody id="tbody-kegiatan"></tbody></table></div>
-   <div class="row-add"><button class="sub mini" id="add-kegiatan">+ Tambah Pertemuan</button><button class="sub mini" id="sync-kegiatan">↻ Samakan dgn minggu</button></div>
+  <div class="card"><h2><span class="n">4</span>Rencana Kegiatan Pembelajaran per Pertemuan</h2><p class="hint">Tiap pertemuan/kelompok pertemuan: kemampuan akhir, topik (dwibahasa), bentuk & model, metode, sintak langkah, bahan ajar, penilaian, dan referensi.</p>
+   <div id="list-kegiatan"></div>
+   <div class="row-add"><button class="sub mini" id="add-kegiatan">+ Tambah Pertemuan</button><button class="sub mini" id="sync-kegiatan">↻ Buat dari minggu</button></div>
   </div>
 </section>
 
-<!-- METODE -->
 <section class="view" id="view-metode">
-  <div class="card"><h2><span class="n">5</span>Matriks Metode Pembelajaran</h2><p class="hint">Centang metode pembelajaran yang digunakan untuk tiap Sub-CPMK.</p>
+  <div class="card"><h2><span class="n">5</span>Matriks Metode Pembelajaran</h2><p class="hint">Centang metode/model pembelajaran yang digunakan untuk tiap Sub-CPMK.</p>
    <div class="tablewrap"><table class="builder" id="table-metode"></table></div>
   </div>
 </section>
 
-<!-- TUGAS -->
 <section class="view" id="view-tugas">
   <div class="card"><h2><span class="n">6</span>Rancangan Tugas Mahasiswa</h2>
    <div class="tablewrap"><table class="builder"><thead><tr>
-     <th style="width:38px">No</th><th style="width:140px">Sub-CPMK</th><th style="width:170px">Indikator</th><th style="width:220px">Bentuk Tugas</th><th style="width:110px">Waktu</th><th style="width:36px"></th>
+     <th style="width:38px">No</th><th style="width:140px">Sub-CPMK</th><th style="width:170px">Indikator</th><th style="width:220px">Bentuk Tugas</th><th style="width:130px">Waktu Pengumpulan</th><th style="width:36px"></th>
    </tr></thead><tbody id="tbody-tugas"></tbody></table></div>
    <div class="row-add"><button class="sub mini" id="add-tugas">+ Tambah Tugas</button></div>
   </div>
 </section>
 
-<!-- PENILAIAN -->
 <section class="view" id="view-penilaian">
   <div class="card"><h2><span class="n">7A</span>Matriks Rancangan Penilaian</h2><p class="hint">Centang teknik penilaian yang dipakai untuk tiap Sub-CPMK.</p>
    <div class="tablewrap"><table class="builder" id="table-matnilai"></table></div>
   </div>
-  <div class="card"><h2><span class="n">7B</span>Format & Bobot Penilaian</h2><p class="hint">Komponen penilaian akhir. Total sebaiknya 100%.</p>
+  <div class="card"><h2><span class="n">7B</span>Format & Bobot Penilaian (rinci)</h2><p class="hint">Komponen penilaian dengan Basis Evaluasi, Kisaran Nilai, Bobot, dan deskripsi dwibahasa. Total sebaiknya 100%.</p>
    <div id="list-nilai"></div>
    <div class="row-add"><button class="sub mini" id="add-nilai">+ Tambah Komponen</button></div>
    <div class="totbar">Total bobot: <span id="nilai-total" class="badge">0%</span></div>
@@ -315,45 +300,40 @@ tr.exam td{background:var(--yellowBg)}
   </div>
 </section>
 
-<!-- RUBRIK -->
 <section class="view" id="view-rubrik">
-  <div class="card"><h2><span class="n">8A</span>Rubrik Sikap</h2>
-   <div class="tablewrap"><table class="builder"><thead><tr><th style="width:150px">Kriteria</th><th>Excellent</th><th>Average</th><th>Limited</th><th style="width:60px">Bobot</th><th style="width:44px"></th></tr></thead><tbody id="tbody-rsikap"></tbody></table></div>
+  <div class="card"><h2><span class="n">8A</span>Rubrik Penilaian Sikap</h2><p class="hint">Header dokumen: Excellent (90-100), Average (70-80), Limited (60-70).</p>
+   <div class="tablewrap"><table class="builder"><thead><tr><th style="width:150px">Kriteria</th><th>Excellent (90-100)</th><th>Average (70-80)</th><th>Limited (60-70)</th><th style="width:70px">Proporsi %</th><th style="width:44px"></th></tr></thead><tbody id="tbody-rsikap"></tbody></table></div>
    <div class="row-add"><button class="sub mini" id="add-rsikap">+ Tambah Kriteria</button></div>
   </div>
-  <div class="card"><h2><span class="n">8B</span>Rubrik Partisipasi</h2>
-   <div class="tablewrap"><table class="builder"><thead><tr><th style="width:150px">Kriteria</th><th>Excellent</th><th>Average</th><th>Limited</th><th style="width:60px">Bobot</th><th style="width:44px"></th></tr></thead><tbody id="tbody-rpart"></tbody></table></div>
+  <div class="card"><h2><span class="n">8B</span>Rubrik Penilaian Partisipasi di Kelas</h2>
+   <div class="tablewrap"><table class="builder"><thead><tr><th style="width:150px">Kriteria</th><th>Excellent (90-100)</th><th>Average (70-80)</th><th>Limited (60-70)</th><th style="width:70px">Proporsi %</th><th style="width:44px"></th></tr></thead><tbody id="tbody-rpart"></tbody></table></div>
    <div class="row-add"><button class="sub mini" id="add-rpart">+ Tambah Kriteria</button></div>
   </div>
-  <div class="card"><h2><span class="n">8C</span>Rubrik Analitik per Sub-CPMK / Tugas</h2><p class="hint">Rubrik penilaian terukur yang ditautkan ke Sub-CPMK atau tugas tertentu, dengan skala skor dan deskriptor.</p>
+  <div class="card"><h2><span class="n">8C</span>Rubrik Analitik (opsional)</h2><p class="hint">Rubrik terukur tambahan yang ditautkan ke Sub-CPMK atau tugas.</p>
    <div id="list-rubrik"></div>
    <div class="row-add"><button class="sub mini" id="add-rubrik">+ Tambah Rubrik Analitik</button></div>
   </div>
 </section>
 
-<!-- KONTRAK -->
 <section class="view" id="view-kontrak">
-  <div class="card"><h2><span class="n">9</span>Kontrak Perkuliahan</h2><p class="hint">Sebagian besar data diambil otomatis dari tab lain. Lengkapi catatan tambahan di bawah.</p>
-   <div class="grid"><div class="field full"><label>Catatan / Tata Tertib Tambahan</label><textarea id="f_kontrakCatatan" rows="5" placeholder="Mis. toleransi keterlambatan, kehadiran minimal 75%, aturan plagiarisme, dsb."></textarea></div></div>
+  <div class="card"><h2><span class="n">9</span>Kontrak Kelas</h2><p class="hint">Sebagian besar data diambil otomatis dari tab lain (identitas, CPMK, deskripsi, pendekatan, media, komponen nilai, konversi, materi per pertemuan, pustaka). Lengkapi tata tertib di bawah.</p>
+   <div class="grid"><div class="field full"><label>Tata Tertib / Catatan Tambahan</label><textarea id="f_kontrakCatatan" rows="5" placeholder="Mis. kehadiran minimal 75%, toleransi keterlambatan, aturan plagiarisme, dsb."></textarea></div></div>
   </div>
 </section>
 
-<!-- VALIDASI -->
 <section class="view" id="view-validasi">
-  <div class="card"><h2>✓ Pemeriksa Kesehatan RPS</h2><p class="hint">Pemeriksaan konsistensi OBE & SN-Dikti otomatis. Perbaiki item merah sebelum mencetak.</p>
+  <div class="card"><h2>✓ Pemeriksa Kesehatan RPS</h2><p class="hint">Pemeriksaan konsistensi OBE & SN-Dikti otomatis.</p>
    <div class="statgrid" id="val-stats" style="margin-bottom:16px"></div>
    <div class="vlist" id="val-list"></div>
   </div>
 </section>
 
-<!-- KKO -->
 <section class="view" id="view-kko">
-  <div class="card"><h2>Kata Kerja Operasional (Taksonomi Bloom Revisi)</h2><p class="hint">Referensi penyusunan CPMK & Sub-CPMK yang terukur. Klik kata untuk menyalin.</p>
+  <div class="card"><h2>Kata Kerja Operasional (Taksonomi Bloom Revisi)</h2><p class="hint">Referensi penyusunan CPMK & Sub-CPMK. Klik kata untuk menyalin.</p>
    <div class="kko-grid" id="kko-grid"></div>
   </div>
 </section>
 
-<!-- PREVIEW -->
 <section class="view" id="view-preview">
   <div class="doc-toolbar">
    <button id="btnRefresh" class="sub">↻ Perbarui Pratinjau</button>
@@ -364,11 +344,11 @@ tr.exam td{background:var(--yellowBg)}
   <div class="card"><div id="rps-doc"></div></div>
 </section>
 </div>
-<div class="footer">RPS OBE Generator v3 — berjalan sepenuhnya di peramban Anda. Data tersimpan otomatis & lokal (localStorage); tidak ada data yang dikirim ke server.</div>
+<div class="footer">RPS OBE Generator v4 — berjalan sepenuhnya di peramban Anda. Data tersimpan otomatis & lokal (localStorage).</div>
 <div class="toast" id="toast"></div>
 <script>
 "use strict";
-const LS_KEY="rps_obe_generator_v3";
+const LS_KEY="rps_obe_generator_v4";
 const $=function(s,r){return (r||document).querySelector(s)};
 const $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 const esc=function(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")};
@@ -376,8 +356,9 @@ const nl2br=function(v){return esc(v).replace(/\n/g,"<br>")};
 const uid=function(){return Math.random().toString(36).slice(2,9)};
 const num=function(v){var n=parseFloat(v);return isNaN(n)?0:n};
 const round2=function(n){return Math.round(n*100)/100};
-const METODE_COLS=[["ceramah","Ceramah"],["diskusi","Diskusi"],["praktikum","Praktikum"],["presentasi","Presentasi"],["video","Video"],["pjbl","PjBL"],["caseStudy","Case Study"],["penguatan","Penguatan"]];
-const NILAI_COLS=[["partG","Partisipasi Grup"],["partI","Partisipasi Indiv"],["proyG","Proyek Grup"],["proyI","Proyek Indiv"],["kuis","Kuis"],["tugas","Tugas"],["uts","UTS"],["uas","UAS"]];
+const lines=function(v){return String(v==null?"":v).split("\n").map(function(x){return x.replace(/^[\s\u2022\-]+/,"").trim();}).filter(function(x){return x;});};
+const METODE_COLS=[["ceramah","Ceramah"],["diskusi","Diskusi Kelas"],["praktikum","Praktikum"],["presentasi","Student Presentasi"],["video","Menonton/Video"],["pjbl","Problem/Project Based Learning"],["caseStudy","Case Study"],["penguatan","Penguatan"]];
+const NILAI_COLS=[["partG","Partisipasi (Grup)"],["partI","Partisipasi (Individu)"],["proyG","Proyek (Grup)"],["proyI","Proyek (Individu)"],["kuis","Kuis"],["tugas","Tugas"],["uts","UTS"],["uas","UAS"]];
 const KKO={
  "Mengingat (C1)":["mendefinisikan","menyebutkan","mengidentifikasi","menjelaskan","menguraikan","mengenali","mencatat"],
  "Memahami (C2)":["merangkum","menafsirkan","mengklasifikasikan","membandingkan","menjelaskan","mencontohkan","menyimpulkan"],
@@ -389,9 +370,9 @@ const KKO={
 const KKO_COLORS=["#7a8b99","#3a8ec0","#2f9e6e","#c79a2e","#c0682e","#b04a8a"];
 const GRADES_DEFAULT=[["A",85,100],["A-",77,84.99],["B+",69,76.99],["B",61,68.99],["B-",53,60.99],["C+",45,52.99],["C",37,44.99],["C-",29,36.99],["D",21,28.99],["E",0,20.99]];
 function effWeeks(){var m=parseInt(S.identitas.minggu,10);return (m>0&&m<53)?m:16;}
-function blankWeeks(n){n=n||16;var a=[];for(var i=1;i<=n;i++){var ex=(i===8||i===n);a.push({mg:i,sub:"",ind:"",kri:"",luring:"",daring:"",mat:"",bobot:"",exam:ex});}return a;}
+function blankWeeks(n){n=n||16;var a=[];for(var i=1;i<=n;i++){var ex=(i===8||i===n);a.push({mg:i,sub:"",ind:"",kri:"",luring:"",daring:"",mat:"",matEN:"",bobot:"",exam:ex});}return a;}
 function blankState(){return{
- identitas:{logo:"",kementerian:"",pt:"",fakultas:"",prodi:"",alamat:"",namaMK:"",namaMKen:"",kodeMK:"",kodeDokumen:"",noRevisi:"",tglRevisi:"",rumpun:"",sksT:"",sksP:"",semester:"",tglSusun:"",minggu:"16",prasyarat:"",deskripsiID:"",deskripsiEN:"",pendekatan:"",media:"",pengampu:""},
+ identitas:{logo:"",kementerian:"",pt:"",fakultas:"",prodi:"",alamat:"",namaMK:"",namaMKen:"",kodeMK:"",kodeDokumen:"",penyusun:"",tahun:"",rumpun:"",sksT:"",sksP:"",semester:"",tglSusun:"",minggu:"16",prasyarat:"",deskripsiID:"",deskripsiEN:"",pendekatan:"",media:"",pengampu:""},
  otorisasi:{dosenPengembang:"",koordinator:"",unitMutu:"",kaprodi:""},
  profil:[],cpl:[],cpmk:[],subcpmk:[],bahan:[],pUtama:[],pBuku:[],
  aiCapaian:"",aiRows:[],
@@ -404,11 +385,13 @@ function normalize(d){var b=blankState();var s=Object.assign(b,d||{});
  s.otorisasi=Object.assign(b.otorisasi,(d&&d.otorisasi)||{});
  ["profil","cpl","cpmk","subcpmk","bahan","pUtama","pBuku","weeks","kegiatan","tugas","nilai","grades","rsikap","rpart","rubrik","aiRows"].forEach(function(k){if(!Array.isArray(s[k]))s[k]=b[k];});
  if(typeof s.metode!=="object"||!s.metode)s.metode={};if(typeof s.matnilai!=="object"||!s.matnilai)s.matnilai={};
- // migrate old ai object {capaian,t4..t1}
- if(d&&d.ai&&!s.aiRows.length){s.aiCapaian=d.ai.capaian||"";[["t4","Tahap 4 — Sintesis & Komunikasi"],["t3","Tahap 3 — Strategi & Implementasi"],["t2","Tahap 2 — Analisis Teknis"],["t1","Tahap 1 — Fondasi"]].forEach(function(p,i){if(i===1)s.aiRows.push({type:"divider",label:"UJIAN TENGAH SEMESTER (UTS)",boxes:[]});s.aiRows.push({type:"stage",label:p[1],boxes:[d.ai[p[0]]||""]});});}
+ s.bahan=s.bahan.map(function(x){return (typeof x==="string")?{id:x,en:""}:{id:(x&&x.id)||"",en:(x&&x.en)||""};});
+ s.nilai=s.nilai.map(function(n){if(n&&("komponen" in n))return {basis:n.basis||"",komponen:n.komponen||"",kisaran:n.kisaran||"",bobot:n.bobot!=null?n.bobot:"",descID:n.descID||"",descEN:n.descEN||""};return {basis:"",komponen:(n&&n.k)||"",kisaran:"",bobot:(n&&n.b)!=null?n.b:"",descID:"",descEN:""};});
+ s.kegiatan=s.kegiatan.map(function(k){k=k||{};return {ke:k.ke||"",sub:k.sub||"",kemampuan:k.kemampuan||"",topik:k.topik||"",topikEN:k.topikEN||"",bentuk:k.bentuk||"",model:k.model||"",metode:k.metode||"",sintak:k.sintak||"",bahanAjar:k.bahanAjar||"",penilaian:k.penilaian||"",referensi:k.referensi||""};});
+ s.weeks.forEach(function(w){if(w.matEN==null)w.matEN="";});
+ if(d&&d.ai&&!s.aiRows.length){s.aiCapaian=d.ai.capaian||"";}
  s.cpmk.forEach(function(c){if(!Array.isArray(c.cpl))c.cpl=[];if(c.bobot==null)c.bobot="";});
  return s;}
-// ---------- Library ----------
 let LIB={courses:[],activeId:null};
 let S=blankState();
 let saveTimer=null;
@@ -421,12 +404,9 @@ function restore(){try{var raw=localStorage.getItem(LS_KEY);if(raw){var p=JSON.p
 function toast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove("show")},2200);}
 </script>
 <script>
-// ---------- Tabs ----------
 function switchView(v){$$(".tab").forEach(function(t){t.classList.toggle("active",t.dataset.view===v)});$$(".view").forEach(function(s){s.classList.toggle("active",s.id==="view-"+v)});
  if(v==="metode")renderMetode();if(v==="penilaian")renderMatnilai();if(v==="pemetaan")renderPemetaan();if(v==="validasi")renderValidasi();if(v==="preview")renderPreview();if(v==="identitas")renderBeban();window.scrollTo(0,0);}
 $("#tabbar").addEventListener("click",function(e){var b=e.target.closest(".tab");if(b)switchView(b.dataset.view);});
-
-// ---------- Course library ----------
 function refreshCourseSel(){var sel=$("#courseSel");sel.innerHTML=LIB.courses.map(function(c){return '<option value="'+c.id+'" '+(c.id===LIB.activeId?"selected":"")+'>'+esc(c.name||"Tanpa Judul")+'</option>';}).join("");}
 function loadCourse(id){syncActive();persist();LIB.activeId=id;S=activeCourse().data;refreshCourseSel();bindAll();renderAll();updateValDot();toast("Beralih: "+(activeCourse().name||""));}
 $("#courseSel").addEventListener("change",function(){loadCourse(this.value);});
@@ -434,76 +414,69 @@ $("#btnNewCourse").addEventListener("click",function(){syncActive();var c={id:ui
 $("#btnDupCourse").addEventListener("click",function(){syncActive();var src=activeCourse();var copy=JSON.parse(JSON.stringify(src.data));var c={id:uid(),name:(src.name||"MK")+" (salinan)",data:normalize(copy)};LIB.courses.push(c);LIB.activeId=c.id;S=c.data;persist();refreshCourseSel();bindAll();renderAll();toast("Mata kuliah diduplikat.");});
 $("#btnRenameCourse").addEventListener("click",function(){var c=activeCourse();var n=prompt("Nama mata kuliah:",c.name||"");if(n!=null){c.name=n;if(!S.identitas.namaMK)S.identitas.namaMK=n;persist();refreshCourseSel();bindAll();toast("Nama diperbarui.");}});
 $("#btnDelCourse").addEventListener("click",function(){if(LIB.courses.length<=1){toast("Minimal satu mata kuliah.");return;}if(!confirm("Hapus mata kuliah \""+(activeCourse().name||"")+"\"?"))return;LIB.courses=LIB.courses.filter(function(c){return c.id!==LIB.activeId});LIB.activeId=LIB.courses[0].id;S=activeCourse().data;persist();refreshCourseSel();bindAll();renderAll();toast("Mata kuliah dihapus.");});
-
-// ---------- Generic bind ----------
 function bindField(id,obj,key,after){var el=document.getElementById(id);if(!el)return;el.value=obj[key]||"";el.oninput=function(){obj[key]=el.value;if(after)after();queueSave();};}
 function bindAll(){
- var im=["kementerian","pt","fakultas","prodi","alamat","namaMK","namaMKen","kodeMK","kodeDokumen","noRevisi","tglRevisi","rumpun","sksT","sksP","semester","tglSusun","minggu","prasyarat","deskripsiID","deskripsiEN","pendekatan","media","pengampu"];
+ var im=["kementerian","pt","fakultas","prodi","alamat","namaMK","namaMKen","kodeMK","kodeDokumen","penyusun","tahun","rumpun","sksT","sksP","semester","tglSusun","minggu","prasyarat","deskripsiID","deskripsiEN","pendekatan","media","pengampu"];
  im.forEach(function(k){bindField("f_"+k,S.identitas,k,(k==="sksT"||k==="sksP")?renderBeban:(k==="namaMK"?function(){syncActive();refreshCourseSel();}:null));});
  ["dosenPengembang","koordinator","unitMutu","kaprodi"].forEach(function(k){bindField("f_"+k,S.otorisasi,k);});
  bindField("f_aiCapaian",S,"aiCapaian");bindField("f_kontrakCatatan",S,"kontrakCatatan");
- // logo preview
  drawLogo();
 }
 function drawLogo(){var p=$("#logoPrev");if(S.identitas.logo){p.innerHTML='<img src="'+S.identitas.logo+'" alt="logo">';}else{p.textContent="Logo";}}
 $("#logoInput").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){S.identitas.logo=r.result;drawLogo();persist();toast("Logo dimuat.");};r.readAsDataURL(f);e.target.value="";});
 $("#logoClear").addEventListener("click",function(){S.identitas.logo="";drawLogo();persist();});
-// ---------- Beban belajar ----------
 function sksTotal(){return num(S.identitas.sksT)+num(S.identitas.sksP);}
 function renderBeban(){var sks=sksTotal();var wk=effWeeks();var tm=sks*50,pt=sks*60,bm=sks*60;var perWk=tm+pt+bm;var totMin=perWk*wk;
  var g=$("#bebanGrid");if(!g)return;
  function st(v,l){return '<div class="stat"><div class="v">'+v+'</div><div class="l">'+l+'</div></div>';}
  g.innerHTML=st(sks||"–","Total SKS")+st(tm+"'","Tatap Muka / mgg")+st(pt+"'","Tugas Terstruktur / mgg")+st(bm+"'","Belajar Mandiri / mgg")+st(perWk+"'","Total / minggu")+st(round2(totMin/60)+" jam","Total "+wk+" minggu");
 }
-// ---------- list helpers ----------
 function ta(val,ph){return '<textarea data-f rows="2" placeholder="'+esc(ph||"")+'">'+esc(val)+'</textarea>';}
 function inp(val,ph,cls){return '<input data-f class="'+(cls||"")+'" placeholder="'+esc(ph||"")+'" value="'+esc(val)+'">';}
+function inpK(key,val,ph,cls){return '<input data-kk="'+key+'" class="'+(cls||"")+'" placeholder="'+esc(ph||"")+'" value="'+esc(val)+'">';}
+function taK(key,val,ph){return '<textarea data-kk="'+key+'" rows="2" placeholder="'+esc(ph||"")+'">'+esc(val)+'</textarea>';}
 function bindList(container,arr,fields,rerender){
  $$(".item",container).forEach(function(it){var i=+it.dataset.i;$$("[data-f]",it).forEach(function(el,fi){var key=fields[fi];if(key==null)return;el.oninput=function(){arr[i][key]=el.value;if(key==="kode"){var chip=$(".chip",it);if(chip)chip.textContent=el.value||chip.textContent;}queueSave();};});var del=$("[data-del]",it);if(del)del.onclick=function(){arr.splice(i,1);rerender();queueSave();};});
 }
 </script>
 <script>
-function renderProfil(){var c=$("#list-profil");c.innerHTML=S.profil.map(function(p,i){return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">PL'+(i+1)+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g2"><div class="field"><label>Profil Lulusan</label>'+inp(p.profil,"Mis. Praktisi Industri Halal")+'</div><div class="field"><label>Deskripsi</label>'+ta(p.deskripsi,"Deskripsi profil")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada profil lulusan.</p>';bindList(c,S.profil,["profil","deskripsi"],renderProfil);}
-function renderCPL(){var c=$("#list-cpl");c.innerHTML=S.cpl.map(function(p,i){return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+esc(p.kode||"CPL")+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g3"><div class="field"><label>Kode</label>'+inp(p.kode,"CPL-5","code-input")+'</div><div class="field" style="grid-column:2/-1"><label>Kelompok Kompetensi</label>'+inp(p.kelompok,"Sikap / Pengetahuan / Keterampilan Khusus")+'</div><div class="field full"><label>Rumusan CPL</label>'+ta(p.desc,"Rumusan capaian pembelajaran lulusan")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada CPL.</p>';bindList(c,S.cpl,["kode","kelompok","desc"],function(){renderCPL();renderCPMK();});}
+function renderProfil(){var c=$("#list-profil");c.innerHTML=S.profil.map(function(p,i){return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">PL'+(i+1)+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g2"><div class="field"><label>Profil Lulusan</label>'+inp(p.profil,"Mis. Praktisi Industri Halal")+'</div><div class="field"><label>Deskripsi Profil</label>'+ta(p.deskripsi,"Deskripsi profil")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada profil lulusan.</p>';bindList(c,S.profil,["profil","deskripsi"],renderProfil);}
+function renderCPL(){var c=$("#list-cpl");var komp=["Attitude","General Skills","Knowledge","Specific Skills"];c.innerHTML=S.cpl.map(function(p,i){var opts=komp.map(function(k){return '<option '+(p.kelompok===k?"selected":"")+'>'+k+'</option>';}).join("");return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+esc(p.kode||"PLO")+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g3"><div class="field"><label>Kode</label>'+inp(p.kode,"PLO 1","code-input")+'</div><div class="field"><label>Kompetensi</label><select data-komp><option value="">—</option>'+opts+'</select></div><div class="field"></div><div class="field full"><label>Rumusan CPL / PLO</label>'+ta(p.desc,"Rumusan capaian pembelajaran lulusan")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada CPL/PLO.</p>';bindList(c,S.cpl,["kode",null,"desc"],function(){renderCPL();renderCPMK();});
+ $$("#list-cpl .item").forEach(function(it){var i=+it.dataset.i;var sel=$("[data-komp]",it);if(sel)sel.onchange=function(){S.cpl[i].kelompok=sel.value;queueSave();};});}
 function recalcCpmkTotal(){var t=0;S.cpmk.forEach(function(c){t+=num(c.bobot)});var b=$("#cpmk-total");if(b){b.textContent=round2(t)+"%";b.className="badge "+(Math.abs(t-100)<0.01?"ok":(t===0?"warn":"bad"));}}
 function renderCPMK(){var c=$("#list-cpmk");c.innerHTML=S.cpmk.map(function(p,i){var opts=S.cpl.map(function(cl){var on=(p.cpl||[]).indexOf(cl.kode)>=0;return '<label><input type="checkbox" data-cpl="'+esc(cl.kode)+'" '+(on?"checked":"")+'>'+esc(cl.kode||"CPL")+'</label>';}).join("")||'<span class="empty-note">Isi CPL dulu</span>';return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+esc(p.kode||"CPMK")+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g3"><div class="field"><label>Kode</label>'+inp(p.kode,"CPMK1","code-input")+'</div><div class="field" style="grid-column:2/3"><label>Rumusan CPMK</label>'+ta(p.desc,"Rumusan CPMK")+'</div><div class="field"><label>Bobot CPMK %</label><input data-bobot type="number" min="0" step="0.5" class="w-input" value="'+esc(p.bobot)+'"></div></div><div class="field"><label>Mendukung CPL</label><div class="checks">'+opts+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada CPMK.</p>';
  bindList(c,S.cpmk,["kode","desc"],function(){renderCPMK();renderSub();});
  $$("#list-cpmk .item").forEach(function(it){var i=+it.dataset.i;$$("[data-cpl]",it).forEach(function(cb){cb.onchange=function(){var arr=S.cpmk[i].cpl||(S.cpmk[i].cpl=[]);var k=cb.dataset.cpl;var ix=arr.indexOf(k);if(cb.checked&&ix<0)arr.push(k);else if(!cb.checked&&ix>=0)arr.splice(ix,1);queueSave();};});var bb=$("[data-bobot]",it);if(bb)bb.oninput=function(){S.cpmk[i].bobot=bb.value;recalcCpmkTotal();queueSave();};});
  recalcCpmkTotal();}
-function renderSub(){var c=$("#list-sub");c.innerHTML=S.subcpmk.map(function(p,i){var opts=S.cpmk.map(function(cm){return '<option value="'+esc(cm.kode)+'" '+(p.cpmk===cm.kode?"selected":"")+'>'+esc(cm.kode||"CPMK")+'</option>';}).join("");return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+esc(p.kode||"Sub")+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g4"><div class="field"><label>Kode</label>'+inp(p.kode,"Sub-CPMK-1","code-input")+'</div><div class="field"><label>Tahap/Level</label>'+inp(p.level,"1","lvl-input")+'</div><div class="field"><label>Turunan dari CPMK</label><select data-cmk><option value="">—</option>'+opts+'</select></div><div class="field"><label>&nbsp;</label></div><div class="field full"><label>Rumusan Sub-CPMK (Kemampuan Akhir)</label>'+ta(p.desc,"Mampu …")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada Sub-CPMK.</p>';
+function renderSub(){var c=$("#list-sub");c.innerHTML=S.subcpmk.map(function(p,i){var opts=S.cpmk.map(function(cm){return '<option value="'+esc(cm.kode)+'" '+(p.cpmk===cm.kode?"selected":"")+'>'+esc(cm.kode||"CPMK")+'</option>';}).join("");return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+esc(p.kode||"Sub")+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g4"><div class="field"><label>Kode</label>'+inp(p.kode,"Sub-CPMK-1","code-input")+'</div><div class="field"><label>Tahap/Level</label>'+inp(p.level,"1","lvl-input")+'</div><div class="field"><label>Turunan dari CPMK</label><select data-cmk><option value="">—</option>'+opts+'</select></div><div class="field"></div><div class="field full"><label>Rumusan Sub-CPMK (Kemampuan Akhir)</label>'+ta(p.desc,"Mampu … (C.2; C.3)")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada Sub-CPMK.</p>';
  bindList(c,S.subcpmk,["kode","level","desc"],function(){renderSub();});
  $$("#list-sub .item").forEach(function(it){var i=+it.dataset.i;var sel=$("[data-cmk]",it);if(sel)sel.onchange=function(){S.subcpmk[i].cpmk=sel.value;queueSave();};});}
+function renderBahan(){var c=$("#list-bahan");c.innerHTML=S.bahan.map(function(b,i){return '<div class="item" data-i="'+i+'" style="padding:11px"><div class="item-head"><span class="chip">'+(i+1)+'</span><button class="danger" data-del>Hapus</button></div><div class="grid g2"><div class="field"><label>Materi (Indonesia)</label>'+taK("id",b.id,"")+'</div><div class="field"><label>Materi (English)</label>'+taK("en",b.en,"")+'</div></div></div>';}).join("")||'<p class="empty-note">Belum ada bahan kajian.</p>';
+ $$(".item",c).forEach(function(it){var i=+it.dataset.i;$$("[data-kk]",it).forEach(function(el){el.oninput=function(){S.bahan[i][el.dataset.kk]=el.value;queueSave();};});$("[data-del]",it).onclick=function(){S.bahan.splice(i,1);renderBahan();queueSave();};});}
 function renderSimple(key,elId){var c=document.getElementById(elId);var arr=S[key];c.innerHTML=arr.map(function(v,i){return '<div class="sl-row" data-i="'+i+'"><span class="num">'+(i+1)+'</span>'+ta(v,"")+'<button class="danger" data-del>✕</button></div>';}).join("")||'<p class="empty-note">Belum ada entri.</p>';
  $$(".sl-row",c).forEach(function(r){var i=+r.dataset.i;var t=$("textarea",r);t.oninput=function(){arr[i]=t.value;queueSave();};$("[data-del]",r).onclick=function(){arr.splice(i,1);renderSimple(key,elId);queueSave();};});}
 </script>
 <script>
-// ---------- Pemetaan ----------
 function renderPemetaan(){
- // M1 CPL x CPMK
  var t1=$("#mx-cpl-cpmk");
  if(!S.cpl.length||!S.cpmk.length){t1.innerHTML='<thead><tr><th>—</th></tr></thead><tbody><tr><td><span class="empty-note">Isi CPL dan CPMK terlebih dahulu.</span></td></tr></tbody>';}
  else{t1.innerHTML='<thead><tr><th style="width:120px">CPL \\ CPMK</th>'+S.cpmk.map(function(c){return '<th>'+esc(c.kode)+'</th>';}).join("")+'</tr></thead><tbody>'+S.cpl.map(function(cl){return '<tr><td><b>'+esc(cl.kode)+'</b></td>'+S.cpmk.map(function(cm){var on=(cm.cpl||[]).indexOf(cl.kode)>=0;return '<td class="'+(on?"yes":"ctr")+'">'+(on?"✓":"")+'</td>';}).join("")+'</tr>';}).join("")+'</tbody>';}
- // M2 CPMK x Sub
  var t2=$("#mx-cpmk-sub");
  if(!S.cpmk.length||!S.subcpmk.length){t2.innerHTML='<thead><tr><th>—</th></tr></thead><tbody><tr><td><span class="empty-note">Isi CPMK dan Sub-CPMK terlebih dahulu.</span></td></tr></tbody>';}
  else{t2.innerHTML='<thead><tr><th style="width:120px">CPMK \\ Sub</th>'+S.subcpmk.map(function(s){return '<th>'+esc(s.kode)+'</th>';}).join("")+'</tr></thead><tbody>'+S.cpmk.map(function(cm){return '<tr><td><b>'+esc(cm.kode)+'</b></td>'+S.subcpmk.map(function(s){var on=s.cpmk===cm.kode;return '<td class="'+(on?"yes":"ctr")+'">'+(on?"✓":"")+'</td>';}).join("")+'</tr>';}).join("")+'</tbody>';}
- // M3 bobot -> CPMK (computed from weeks via sub->cpmk)
  var t3=$("#mx-bobot-cpmk");
  var agg={};S.cpmk.forEach(function(c){agg[c.kode]={fromWeeks:0,bobot:num(c.bobot)};});
  S.weeks.forEach(function(w){if(!w.sub)return;var s=S.subcpmk.filter(function(x){return x.kode===w.sub})[0];if(s&&s.cpmk&&agg[s.cpmk])agg[s.cpmk].fromWeeks+=num(w.bobot);});
  if(!S.cpmk.length){t3.innerHTML='<thead><tr><th>—</th></tr></thead><tbody><tr><td><span class="empty-note">Isi CPMK terlebih dahulu.</span></td></tr></tbody>';}
- else{var tw=0,tb=0;t3.innerHTML='<thead><tr><th style="width:90px">CPMK</th><th>Rumusan</th><th style="width:120px">Bobot dari Penilaian Mingguan</th><th style="width:110px">Bobot CPMK (rencana)</th><th style="width:90px">Status</th></tr></thead><tbody>'+S.cpmk.map(function(c){var a=agg[c.kode];tw+=a.fromWeeks;tb+=a.bobot;var ok=a.fromWeeks>0;return '<tr><td><b>'+esc(c.kode)+'</b></td><td>'+esc(c.desc||"")+'</td><td class="ctr">'+round2(a.fromWeeks)+'%</td><td class="ctr">'+(c.bobot!==""?round2(a.bobot)+"%":"–")+'</td><td class="ctr">'+(ok?'<span style="color:var(--green)">✓ dinilai</span>':'<span style="color:var(--red)">belum</span>')+'</td></tr>';}).join("")+'<tr><th colspan="2" style="text-align:right">Total</th><th class="ctr">'+round2(tw)+'%</th><th class="ctr">'+round2(tb)+'%</th><th></th></tr></tbody>';}
+ else{var tw=0,tb=0;t3.innerHTML='<thead><tr><th style="width:90px">CPMK</th><th>Rumusan</th><th style="width:120px">Bobot dari Penilaian Mingguan</th><th style="width:110px">Bobot CPMK</th><th style="width:90px">Status</th></tr></thead><tbody>'+S.cpmk.map(function(c){var a=agg[c.kode];tw+=a.fromWeeks;tb+=a.bobot;var ok=a.fromWeeks>0;return '<tr><td><b>'+esc(c.kode)+'</b></td><td>'+esc(c.desc||"")+'</td><td class="ctr">'+round2(a.fromWeeks)+'%</td><td class="ctr">'+(c.bobot!==""?round2(a.bobot)+"%":"–")+'</td><td class="ctr">'+(ok?'<span style="color:var(--green)">✓ dinilai</span>':'<span style="color:var(--red)">belum</span>')+'</td></tr>';}).join("")+'<tr><th colspan="2" style="text-align:right">Total</th><th class="ctr">'+round2(tw)+'%</th><th class="ctr">'+round2(tb)+'%</th><th></th></tr></tbody>';}
 }
-// ---------- Analisis Instruksional builder ----------
 function renderAI(){var c=$("#ai-rows");
  c.innerHTML=S.aiRows.map(function(r,i){
  if(r.type==="divider"){return '<div class="ai-row" data-i="'+i+'"><div class="ai-head"><span class="tag divider">Pembatas</span><div class="spacer"></div><button class="icon" data-up>▲</button><button class="icon" data-down>▼</button><button class="danger" data-del>Hapus</button></div>'+inp(r.label,"Mis. UJIAN TENGAH SEMESTER (UTS)")+'</div>';}
  var boxes=(r.boxes||[]).map(function(b,bi){return '<div class="ai-box" data-bi="'+bi+'">'+ta(b,"Isi kotak / kemampuan tahap ini")+'<button class="danger" data-delbox>✕</button></div>';}).join("");
- return '<div class="ai-row" data-i="'+i+'"><div class="ai-head"><span class="tag stage">Tahap</span>'+inp(r.label,"Label tahap (mis. Tahap 1 — Fondasi)")+'<div class="spacer"></div><button class="icon" data-up>▲</button><button class="icon" data-down>▼</button><button class="danger" data-del>Hapus</button></div><div class="ai-boxes">'+boxes+'</div><div class="row-add"><button class="sub mini" data-addbox>+ Kotak sejajar</button></div></div>';
- }).join("")||'<p class="empty-note">Belum ada tahapan. Tambah Tahap atau Pembatas di bawah.</p>';
+ return '<div class="ai-row" data-i="'+i+'"><div class="ai-head"><span class="tag stage">Tahap</span>'+inp(r.label,"Label tahap")+'<div class="spacer"></div><button class="icon" data-up>▲</button><button class="icon" data-down>▼</button><button class="danger" data-del>Hapus</button></div><div class="ai-boxes">'+boxes+'</div><div class="row-add"><button class="sub mini" data-addbox>+ Kotak sejajar</button></div></div>';
+ }).join("")||'<p class="empty-note">Belum ada tahapan.</p>';
  $$(".ai-row",c).forEach(function(el){var i=+el.dataset.i;var r=S.aiRows[i];
- var lab=$('.ai-head [data-f]',el)||$('[data-f]',el);
- // label input: for divider it's the only data-f at root; for stage it's in head
  var headInp=el.querySelector('.ai-head [data-f]');if(headInp){headInp.oninput=function(){r.label=headInp.value;queueSave();};}
  if(r.type==="divider"){var dInp=el.querySelector('[data-f]');if(dInp)dInp.oninput=function(){r.label=dInp.value;queueSave();};}
  $$('.ai-box',el).forEach(function(bx){var bi=+bx.dataset.bi;var t=$('textarea',bx);t.oninput=function(){r.boxes[bi]=t.value;queueSave();};$('[data-delbox]',bx).onclick=function(){r.boxes.splice(bi,1);renderAI();queueSave();};});
@@ -515,15 +488,20 @@ function renderAI(){var c=$("#ai-rows");
 </script>
 <script>
 function subOptions(sel){return '<option value="">—</option>'+S.subcpmk.map(function(s){return '<option value="'+esc(s.kode)+'" '+(sel===s.kode?"selected":"")+'>'+esc(s.kode||"Sub")+'</option>';}).join("");}
-function waktuStr(exam){var sks=sksTotal();if(!sks)return "–";if(exam)return "100'";return "TM "+(sks*50)+"' / PT "+(sks*60)+"' / BM "+(sks*60)+"'";}
 function recalcWeekTotal(){var t=0;S.weeks.forEach(function(w){t+=num(w.bobot)});var b=$("#week-total");b.textContent=round2(t)+"%";b.className="badge "+(Math.abs(t-100)<0.01?"ok":"bad");}
-function renderWeeks(){var tb=$("#tbody-weeks");tb.innerHTML=S.weeks.map(function(w,i){return '<tr class="'+(w.exam?"exam":"")+'" data-i="'+i+'"><td class="wk">'+w.mg+'</td><td><select data-k="sub">'+subOptions(w.sub)+'</select></td><td><textarea data-k="ind"></textarea></td><td><textarea data-k="kri"></textarea></td><td><textarea data-k="luring"></textarea></td><td><textarea data-k="daring"></textarea></td><td class="ctr" data-waktu style="font-size:11px;color:#777">'+waktuStr(w.exam)+'</td><td><textarea data-k="mat"></textarea></td><td><input data-k="bobot" type="number" min="0" step="0.5"></td><td class="ctr"><input data-k="exam" type="checkbox"></td></tr>';}).join("");
- $$("tr",tb).forEach(function(tr){var i=+tr.dataset.i;var w=S.weeks[i];$$("[data-k]",tr).forEach(function(el){var k=el.dataset.k;if(el.type==="checkbox"){el.checked=!!w[k];el.onchange=function(){w.exam=el.checked;tr.classList.toggle("exam",el.checked);var wq=$("[data-waktu]",tr);if(wq)wq.textContent=waktuStr(w.exam);queueSave();};}else{el.value=w[k]||"";el.oninput=function(){w[k]=el.value;if(k==="bobot")recalcWeekTotal();queueSave();};}});});
+function renderWeeks(){var tb=$("#tbody-weeks");tb.innerHTML=S.weeks.map(function(w,i){return '<tr class="'+(w.exam?"exam":"")+'" data-i="'+i+'"><td class="wk">'+w.mg+'</td><td><select data-k="sub">'+subOptions(w.sub)+'</select></td><td><textarea data-k="ind"></textarea></td><td><textarea data-k="kri"></textarea></td><td><textarea data-k="luring"></textarea></td><td><textarea data-k="daring"></textarea></td><td><textarea data-k="mat"></textarea></td><td><textarea data-k="matEN"></textarea></td><td><input data-k="bobot" type="number" min="0" step="0.5"></td><td class="ctr"><input data-k="exam" type="checkbox"></td></tr>';}).join("");
+ $$("tr",tb).forEach(function(tr){var i=+tr.dataset.i;var w=S.weeks[i];$$("[data-k]",tr).forEach(function(el){var k=el.dataset.k;if(el.type==="checkbox"){el.checked=!!w[k];el.onchange=function(){w.exam=el.checked;tr.classList.toggle("exam",el.checked);queueSave();};}else{el.value=w[k]||"";el.oninput=function(){w[k]=el.value;if(k==="bobot")recalcWeekTotal();queueSave();};}});});
  recalcWeekTotal();}
 $("#week-sync").addEventListener("click",function(){var n=effWeeks();var old=S.weeks;var nw=blankWeeks(n);for(var i=0;i<Math.min(old.length,n);i++){nw[i]=old[i];nw[i].mg=i+1;}S.weeks=nw;renderWeeks();queueSave();toast("Jumlah minggu disetel ke "+n+".");});
-function renderKegiatan(){var tb=$("#tbody-kegiatan");tb.innerHTML=S.kegiatan.map(function(k,i){return '<tr data-i="'+i+'"><td class="wk"><input data-k="ke" style="width:34px;padding:4px;text-align:center" value="'+esc(k.ke)+'"></td><td><textarea data-k="kemampuan"></textarea></td><td><textarea data-k="topik"></textarea></td><td><textarea data-k="bahanAjar"></textarea></td><td><textarea data-k="referensi"></textarea></td><td style="border:none"><button class="danger" data-del>✕</button></td></tr>';}).join("")||'<tr><td colspan="6" style="border:none"><span class="empty-note">Belum ada pertemuan. Klik “Samakan dgn minggu”.</span></td></tr>';
- $$("tr[data-i]",tb).forEach(function(tr){var i=+tr.dataset.i;var k=S.kegiatan[i];$$("[data-k]",tr).forEach(function(el){var key=el.dataset.k;el.value=k[key]||"";el.oninput=function(){k[key]=el.value;queueSave();};});var d=$("[data-del]",tr);if(d)d.onclick=function(){S.kegiatan.splice(i,1);renderKegiatan();queueSave();};});}
-function renderMatrix(tableId,store,cols){var tbl=document.getElementById(tableId);var head='<thead><tr><th style="width:150px">Sub-CPMK</th>'+cols.map(function(c){return '<th class="c">'+esc(c[1])+'</th>';}).join("")+'</tr></thead>';
+function renderKegiatan(){var c=$("#list-kegiatan");c.innerHTML=S.kegiatan.map(function(k,i){return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">Pert. '+esc(k.ke||(i+1))+'</span><button class="danger" data-del>Hapus</button></div>'+
+ '<div class="grid g3"><div class="field"><label>Pembelajaran Ke-</label>'+inpK("ke",k.ke,"1 & 2","code-input")+'</div><div class="field" style="grid-column:2/-1"><label>Kemampuan Akhir (Sub-CPMK)</label><select data-sub>'+subOptions(k.sub)+'</select></div></div>'+
+ '<div class="grid g2"><div class="field"><label>Topik (Indonesia, satu per baris)</label>'+taK("topik",k.topik,"")+'</div><div class="field"><label>Topik (English)</label>'+taK("topikEN",k.topikEN,"")+'</div></div>'+
+ '<div class="grid g3"><div class="field"><label>Bentuk Pembelajaran</label>'+inpK("bentuk",k.bentuk,"Tatap muka")+'</div><div class="field"><label>Model</label>'+inpK("model",k.model,"Pembelajaran Kolaboratif")+'</div><div class="field"><label>Metode</label>'+inpK("metode",k.metode,"Ceramah, Diskusi")+'</div></div>'+
+ '<div class="grid g2"><div class="field"><label>Sintak Pembelajaran (satu langkah per baris)</label>'+taK("sintak",k.sintak,"")+'</div><div class="field"><label>Referensi (satu per baris)</label>'+taK("referensi",k.referensi,"")+'</div></div>'+
+ '<div class="grid g2"><div class="field"><label>Bahan Ajar</label>'+inpK("bahanAjar",k.bahanAjar,"PPT (di-share pada GCR)")+'</div><div class="field"><label>Penilaian</label>'+inpK("penilaian",k.penilaian,"Membuat resume materi kuliah")+'</div></div>'+
+ '</div>';}).join("")||'<p class="empty-note">Belum ada pertemuan. Klik “Buat dari minggu”.</p>';
+ $$(".item",c).forEach(function(it){var i=+it.dataset.i;var k=S.kegiatan[i];$$("[data-kk]",it).forEach(function(el){el.oninput=function(){k[el.dataset.kk]=el.value;if(el.dataset.kk==="ke"){var chip=$(".chip",it);if(chip)chip.textContent="Pert. "+(el.value||(i+1));}queueSave();};});var sb=$("[data-sub]",it);if(sb)sb.onchange=function(){k.sub=sb.value;queueSave();};$("[data-del]",it).onclick=function(){S.kegiatan.splice(i,1);renderKegiatan();queueSave();};});}
+function renderMatrix(tableId,store,cols){var tbl=document.getElementById(tableId);var head='<thead><tr><th style="width:170px">Sub-CPMK</th>'+cols.map(function(c){return '<th class="c">'+esc(c[1])+'</th>';}).join("")+'</tr></thead>';
  if(!S.subcpmk.length){tbl.innerHTML=head+'<tbody><tr><td colspan="'+(cols.length+1)+'"><span class="empty-note">Isi Sub-CPMK terlebih dahulu.</span></td></tr></tbody>';return;}
  var body=S.subcpmk.map(function(s){var row=S[store][s.kode]||(S[store][s.kode]={});return '<tr data-sub="'+esc(s.kode)+'"><td><b>'+esc(s.kode||"Sub")+'</b><div style="font-size:11px;color:#888">'+esc((s.desc||"").slice(0,55))+'</div></td>'+cols.map(function(c){return '<td class="ctr"><input type="checkbox" data-c="'+c[0]+'" '+(row[c[0]]?"checked":"")+'></td>';}).join("")+'</tr>';}).join("");
  tbl.innerHTML=head+'<tbody>'+body+'</tbody>';
@@ -532,9 +510,12 @@ function renderMetode(){renderMatrix("table-metode","metode",METODE_COLS);}
 function renderMatnilai(){renderMatrix("table-matnilai","matnilai",NILAI_COLS);}
 function renderTugas(){var tb=$("#tbody-tugas");tb.innerHTML=S.tugas.map(function(t,i){return '<tr data-i="'+i+'"><td class="wk">'+(i+1)+'</td><td><select data-k="sub">'+subOptions(t.sub)+'</select></td><td><textarea data-k="ind"></textarea></td><td><textarea data-k="bentuk"></textarea></td><td><input data-k="waktu" value="'+esc(t.waktu)+'"></td><td style="border:none"><button class="danger" data-del>✕</button></td></tr>';}).join("")||'<tr><td colspan="6" style="border:none"><span class="empty-note">Belum ada tugas.</span></td></tr>';
  $$("tr[data-i]",tb).forEach(function(tr){var i=+tr.dataset.i;var t=S.tugas[i];$$("[data-k]",tr).forEach(function(el){var k=el.dataset.k;if(el.tagName==="TEXTAREA")el.value=t[k]||"";el.oninput=function(){t[k]=el.value;queueSave();};el.onchange=function(){t[k]=el.value;queueSave();};});var d=$("[data-del]",tr);if(d)d.onclick=function(){S.tugas.splice(i,1);renderTugas();queueSave();};});}
-function recalcNilaiTotal(){var t=0;S.nilai.forEach(function(n){t+=num(n.b)});var b=$("#nilai-total");b.textContent=round2(t)+"%";b.className="badge "+(Math.abs(t-100)<0.01?"ok":"bad");}
-function renderNilai(){var c=$("#list-nilai");c.innerHTML=S.nilai.map(function(n,i){return '<div class="item" data-i="'+i+'" style="display:flex;gap:10px;align-items:flex-end;margin-bottom:8px;padding:10px"><div class="field" style="flex:1"><label>Komponen</label>'+inp(n.k,"Mis. Ujian Tengah Semester")+'</div><div class="field" style="width:120px"><label>Bobot %</label><input data-b type="number" min="0" step="0.5" value="'+esc(n.b)+'"></div><button class="danger" data-del>Hapus</button></div>';}).join("")||'<p class="empty-note">Belum ada komponen penilaian.</p>';
- $$(".item",c).forEach(function(it){var i=+it.dataset.i;var ki=$("[data-f]",it);ki.oninput=function(){S.nilai[i].k=ki.value;queueSave();};var bi=$("[data-b]",it);bi.oninput=function(){S.nilai[i].b=bi.value;recalcNilaiTotal();queueSave();};$("[data-del]",it).onclick=function(){S.nilai.splice(i,1);renderNilai();queueSave();};});
+function recalcNilaiTotal(){var t=0;S.nilai.forEach(function(n){t+=num(n.bobot)});var b=$("#nilai-total");b.textContent=round2(t)+"%";b.className="badge "+(Math.abs(t-100)<0.01?"ok":"bad");}
+function renderNilai(){var c=$("#list-nilai");c.innerHTML=S.nilai.map(function(n,i){return '<div class="item" data-i="'+i+'"><div class="item-head"><span class="chip">'+(i+1)+'</span><button class="danger" data-del>Hapus</button></div>'+
+ '<div class="grid g4"><div class="field"><label>Basis Evaluasi</label>'+inpK("basis",n.basis,"Aktivitas Partisipatif")+'</div><div class="field"><label>Komponen Evaluasi</label>'+inpK("komponen",n.komponen,"Tugas")+'</div><div class="field"><label>Kisaran Nilai</label>'+inpK("kisaran",n.kisaran,"60 – 100")+'</div><div class="field"><label>Bobot %</label><input data-b type="number" min="0" step="0.5" value="'+esc(n.bobot)+'"></div></div>'+
+ '<div class="grid g2"><div class="field"><label>Deskripsi (Indonesia)</label>'+taK("descID",n.descID,"")+'</div><div class="field"><label>Deskripsi (English)</label>'+taK("descEN",n.descEN,"")+'</div></div>'+
+ '</div>';}).join("")||'<p class="empty-note">Belum ada komponen penilaian.</p>';
+ $$(".item",c).forEach(function(it){var i=+it.dataset.i;var n=S.nilai[i];$$("[data-kk]",it).forEach(function(el){el.oninput=function(){n[el.dataset.kk]=el.value;queueSave();};});var b=$("[data-b]",it);b.oninput=function(){n.bobot=b.value;recalcNilaiTotal();queueSave();};$("[data-del]",it).onclick=function(){S.nilai.splice(i,1);renderNilai();queueSave();};});
  recalcNilaiTotal();}
 function renderGrades(){var tb=$("#tbody-grades");tb.innerHTML=S.grades.map(function(g,i){return '<tr data-i="'+i+'"><td><input data-k="huruf" value="'+esc(g.huruf)+'" style="max-width:80px"></td><td><input data-k="min" type="number" step="0.01" value="'+esc(g.min)+'"></td><td><input data-k="max" type="number" step="0.01" value="'+esc(g.max)+'"></td><td style="border:none"><button class="danger" data-del>✕</button></td></tr>';}).join("");
  $$("tr[data-i]",tb).forEach(function(tr){var i=+tr.dataset.i;$$("[data-k]",tr).forEach(function(el){el.oninput=function(){S.grades[i][el.dataset.k]=el.value;queueSave();};});$("[data-del]",tr).onclick=function(){S.grades.splice(i,1);renderGrades();queueSave();};});}
@@ -542,14 +523,13 @@ function renderGrades(){var tb=$("#tbody-grades");tb.innerHTML=S.grades.map(func
 <script>
 function renderRubrik(key,tbId){var tb=document.getElementById(tbId);var arr=S[key];tb.innerHTML=arr.map(function(r,i){return '<tr data-i="'+i+'"><td><input data-k="kriteria" value="'+esc(r.kriteria)+'"></td><td><textarea data-k="ex"></textarea></td><td><textarea data-k="av"></textarea></td><td><textarea data-k="li"></textarea></td><td><input data-k="p" type="number" value="'+esc(r.p)+'" style="max-width:60px"></td><td style="border:none"><button class="danger" data-del>✕</button></td></tr>';}).join("")||'<tr><td colspan="6" style="border:none"><span class="empty-note">Belum ada kriteria.</span></td></tr>';
  $$("tr[data-i]",tb).forEach(function(tr){var i=+tr.dataset.i;var r=arr[i];$$("[data-k]",tr).forEach(function(el){var k=el.dataset.k;if(el.tagName==="TEXTAREA")el.value=r[k]||"";el.oninput=function(){r[k]=el.value;queueSave();};});var d=$("[data-del]",tr);if(d)d.onclick=function(){arr.splice(i,1);renderRubrik(key,tbId);queueSave();};});}
-// Analytic rubrics
 function blankRubrik(){return{judul:"",target:"",skala:[{label:"Sangat Baik",score:"4"},{label:"Baik",score:"3"},{label:"Cukup",score:"2"},{label:"Kurang",score:"1"}],kriteria:[{nama:"",bobot:"",desc:{}}]};}
-function targetOptions(sel){var o='<option value="">— (umum)</option>';o+=S.subcpmk.map(function(s){return '<option value="Sub:'+esc(s.kode)+'" '+(sel==="Sub:"+s.kode?"selected":"")+'>Sub-CPMK: '+esc(s.kode)+'</option>';}).join("");S.tugas.forEach(function(t,i){var v="Tugas:"+(i+1);o+='<option value="'+v+'" '+(sel===v?"selected":"")+'>Tugas '+(i+1)+(t.bentuk?" — "+esc(t.bentuk.slice(0,30)):"")+'</option>';});return o;}
+function targetOptions(sel){var o='<option value="">— (umum)</option>';o+=S.subcpmk.map(function(s){return '<option value="Sub:'+esc(s.kode)+'" '+(sel==="Sub:"+s.kode?"selected":"")+'>Sub-CPMK: '+esc(s.kode)+'</option>';}).join("");S.tugas.forEach(function(t,i){var v="Tugas:"+(i+1);o+='<option value="'+v+'" '+(sel===v?"selected":"")+'>Tugas '+(i+1)+'</option>';});return o;}
 function renderRubrikAnalitik(){var c=$("#list-rubrik");
  c.innerHTML=S.rubrik.map(function(r,i){
- var head='<thead><tr><th style="width:130px">Kriteria</th><th style="width:60px">Bobot %</th>'+r.skala.map(function(sk,si){return '<th>'+esc(sk.label)+' ('+esc(sk.score)+')</th>';}).join("")+'</tr></thead>';
+ var head='<thead><tr><th style="width:130px">Kriteria</th><th style="width:60px">Bobot %</th>'+r.skala.map(function(sk){return '<th>'+esc(sk.label)+' ('+esc(sk.score)+')</th>';}).join("")+'</tr></thead>';
  var rows=r.kriteria.map(function(kr,ki){return '<tr data-ki="'+ki+'"><td><input data-kn value="'+esc(kr.nama)+'"></td><td><input data-kb type="number" value="'+esc(kr.bobot)+'" style="max-width:55px"></td>'+r.skala.map(function(sk,si){return '<td><textarea data-kd="'+si+'">'+esc((kr.desc||{})[si]||"")+'</textarea></td>';}).join("")+'</tr>';}).join("");
- return '<div class="rubric-card" data-i="'+i+'"><div class="item-head"><span class="chip">Rubrik '+(i+1)+'</span><div class="field" style="flex:1;min-width:180px"><label>Judul</label>'+inp(r.judul,"Mis. Rubrik Penilaian Proyek Akhir")+'</div><div class="field" style="width:230px"><label>Tautkan ke</label><select data-target>'+targetOptions(r.target)+'</select></div><button class="danger" data-del>Hapus</button></div>'+
+ return '<div class="rubric-card" data-i="'+i+'"><div class="item-head"><span class="chip">Rubrik '+(i+1)+'</span><div class="field" style="flex:1;min-width:180px"><label>Judul</label>'+inp(r.judul,"Mis. Rubrik Proyek Akhir")+'</div><div class="field" style="width:230px"><label>Tautkan ke</label><select data-target>'+targetOptions(r.target)+'</select></div><button class="danger" data-del>Hapus</button></div>'+
  '<div class="tablewrap"><table class="builder">'+head+'<tbody>'+rows+'</tbody></table></div>'+
  '<div class="row-add"><button class="sub mini" data-addk>+ Kriteria</button></div></div>';
  }).join("")||'<p class="empty-note">Belum ada rubrik analitik.</p>';
@@ -561,45 +541,27 @@ function renderRubrikAnalitik(){var c=$("#list-rubrik");
  $$("tr[data-ki]",el).forEach(function(tr){var ki=+tr.dataset.ki;var kr=r.kriteria[ki];var kn=$("[data-kn]",tr);kn.oninput=function(){kr.nama=kn.value;queueSave();};var kb=$("[data-kb]",tr);kb.oninput=function(){kr.bobot=kb.value;queueSave();};$$("[data-kd]",tr).forEach(function(td){var si=+td.dataset.kd;td.oninput=function(){if(!kr.desc)kr.desc={};kr.desc[si]=td.value;queueSave();};});});
  });}
 $("#add-rubrik").addEventListener("click",function(){S.rubrik.push(blankRubrik());renderRubrikAnalitik();queueSave();});
-// ---------- KKO ----------
 function renderKKO(){var g=$("#kko-grid");var i=0;g.innerHTML=Object.keys(KKO).map(function(lvl){var col=KKO_COLORS[i++%KKO_COLORS.length];return '<div class="kko-card"><h4 style="background:'+col+'">'+esc(lvl)+'</h4><div class="verbs">'+KKO[lvl].map(function(v){return '<span class="kko-verb" style="cursor:pointer;border-bottom:1px dotted #bbb">'+esc(v)+'</span>';}).join(", ")+'</div></div>';}).join("");
  $$(".kko-verb",g).forEach(function(s){s.onclick=function(){var t=s.textContent;if(navigator.clipboard)navigator.clipboard.writeText(t);toast('Disalin: "'+t+'"');};});}
-</script>
-<script>
-function renderAll(){renderProfil();renderCPL();renderCPMK();renderSub();renderSimple("bahan","list-bahan");renderSimple("pUtama","list-pUtama");renderSimple("pBuku","list-pBuku");renderAI();renderWeeks();renderKegiatan();renderMetode();renderMatnilai();renderTugas();renderNilai();renderGrades();renderRubrik("rsikap","tbody-rsikap");renderRubrik("rpart","tbody-rpart");renderRubrikAnalitik();renderKKO();renderBeban();renderPemetaan();updateValDot();}
-// ---------- Validation engine ----------
+function renderAll(){renderProfil();renderCPL();renderCPMK();renderSub();renderBahan();renderSimple("pUtama","list-pUtama");renderSimple("pBuku","list-pBuku");renderAI();renderWeeks();renderKegiatan();renderMetode();renderMatnilai();renderTugas();renderNilai();renderGrades();renderRubrik("rsikap","tbody-rsikap");renderRubrik("rpart","tbody-rpart");renderRubrikAnalitik();renderKKO();renderBeban();renderPemetaan();updateValDot();}
 function runChecks(){var out=[];function ok(m){out.push({lvl:"ok",m:m});}function warn(m){out.push({lvl:"warn",m:m});}function err(m){out.push({lvl:"err",m:m});}
  var id=S.identitas;
- if(!id.namaMK)err("Nama mata kuliah belum diisi.");if(!id.kodeMK)warn("Kode mata kuliah belum diisi.");if(!sksTotal())err("SKS belum diisi — beban belajar tidak dapat dihitung.");
- if(!S.cpl.length)err("Belum ada CPL.");else ok(S.cpl.length+" CPL terdaftar.");
+ if(!id.namaMK)err("Nama mata kuliah belum diisi.");if(!id.kodeMK)warn("Kode mata kuliah belum diisi.");if(!sksTotal())err("SKS belum diisi.");if(!id.penyusun)warn("Penyusun (sampul) belum diisi.");
+ if(!S.cpl.length)err("Belum ada CPL/PLO.");else ok(S.cpl.length+" CPL/PLO terdaftar.");
  if(!S.cpmk.length)err("Belum ada CPMK.");else ok(S.cpmk.length+" CPMK terdaftar.");
  if(!S.subcpmk.length)err("Belum ada Sub-CPMK.");else ok(S.subcpmk.length+" Sub-CPMK terdaftar.");
- // CPMK tanpa CPL
  S.cpmk.forEach(function(c){if(!(c.cpl||[]).length)warn("CPMK "+(c.kode||"?")+" belum ditautkan ke CPL.");});
- // CPL tanpa CPMK
  S.cpl.forEach(function(cl){var used=S.cpmk.some(function(c){return (c.cpl||[]).indexOf(cl.kode)>=0});if(!used)warn("CPL "+(cl.kode||"?")+" tidak didukung CPMK mana pun.");});
- // CPMK tanpa Sub
  S.cpmk.forEach(function(c){var has=S.subcpmk.some(function(s){return s.cpmk===c.kode});if(!has)warn("CPMK "+(c.kode||"?")+" belum memiliki Sub-CPMK.");});
- // Sub tanpa CPMK
  S.subcpmk.forEach(function(s){if(!s.cpmk)warn("Sub-CPMK "+(s.kode||"?")+" belum diturunkan dari CPMK.");});
- // Sub tak dipakai di minggu
- S.subcpmk.forEach(function(s){var used=S.weeks.some(function(w){return w.sub===s.kode});if(!used)warn("Sub-CPMK "+(s.kode||"?")+" belum dipetakan ke minggu pembelajaran.");});
- // bobot CPMK
- var cpmkB=0;S.cpmk.forEach(function(c){cpmkB+=num(c.bobot)});if(S.cpmk.length){if(Math.abs(cpmkB-100)<0.01)ok("Total bobot CPMK = 100%.");else warn("Total bobot CPMK = "+round2(cpmkB)+"% (idealnya 100%).");}
- // bobot minggu
- var wB=0;S.weeks.forEach(function(w){wB+=num(w.bobot)});if(Math.abs(wB-100)<0.01)ok("Total bobot penilaian mingguan = 100%.");else err("Total bobot penilaian mingguan = "+round2(wB)+"% (harus 100%).");
- // bobot komponen nilai
- var nB=0;S.nilai.forEach(function(n){nB+=num(n.b)});if(S.nilai.length){if(Math.abs(nB-100)<0.01)ok("Total bobot komponen penilaian = 100%.");else err("Total bobot komponen penilaian = "+round2(nB)+"% (harus 100%).");}else warn("Komponen penilaian (7B) belum diisi.");
- // minggu kosong
- var emptyW=S.weeks.filter(function(w){return !w.exam&&!w.sub}).length;if(emptyW)warn(emptyW+" minggu non-ujian belum memiliki Sub-CPMK.");
- // analisis instruksional
+ S.subcpmk.forEach(function(s){var used=S.weeks.some(function(w){return w.sub===s.kode});if(!used)warn("Sub-CPMK "+(s.kode||"?")+" belum dipetakan ke minggu.");});
+ var wB=0;S.weeks.forEach(function(w){wB+=num(w.bobot)});if(Math.abs(wB-100)<0.01)ok("Total bobot mingguan = 100%.");else warn("Total bobot mingguan = "+round2(wB)+"%.");
+ var nB=0;S.nilai.forEach(function(n){nB+=num(n.bobot)});if(S.nilai.length){if(Math.abs(nB-100)<0.01)ok("Total bobot komponen penilaian = 100%.");else err("Total bobot komponen penilaian = "+round2(nB)+"% (harus 100%).");}else warn("Komponen penilaian (7B) belum diisi.");
+ if(!S.kegiatan.length)warn("Rencana kegiatan (4) belum diisi.");
  if(!S.aiRows.length)warn("Bagan analisis instruksional masih kosong.");
- // pustaka
  if(!S.pUtama.length)warn("Pustaka utama belum diisi.");
- // deskripsi
  if(!id.deskripsiID)warn("Deskripsi singkat MK belum diisi.");
- // rubrik
- if(!S.rubrik.length&&!S.rsikap.length&&!S.rpart.length)warn("Belum ada rubrik penilaian.");
+ if(!S.rsikap.length&&!S.rpart.length)warn("Rubrik sikap/partisipasi belum diisi.");
  return out;}
 function updateValDot(){var checks=runChecks();var hasErr=checks.some(function(c){return c.lvl==="err"});var hasWarn=checks.some(function(c){return c.lvl==="warn"});var d=$("#valDot");if(d)d.style.background=hasErr?"var(--red)":(hasWarn?"var(--amber)":"var(--green)");}
 function renderValidasi(){var checks=runChecks();var e=checks.filter(function(c){return c.lvl==="err"}).length,w=checks.filter(function(c){return c.lvl==="warn"}).length,o=checks.filter(function(c){return c.lvl==="ok"}).length;
@@ -610,145 +572,83 @@ function renderValidasi(){var checks=runChecks();var e=checks.filter(function(c)
  $("#val-list").innerHTML=checks.map(function(c){return '<div class="vitem '+c.lvl+'"><span class="vic">'+ic[c.lvl]+'</span><span>'+esc(c.m)+'</span></div>';}).join("");}
 </script>
 <script>
-function subLabel(kode){var s=S.subcpmk.filter(function(x){return x.kode===kode})[0];return s?(s.kode+" "+(s.desc||"")):kode;}
 function subCell(kode){var s=S.subcpmk.filter(function(x){return x.kode===kode})[0];if(!s)return esc(kode);return '<b>'+esc(s.kode)+'</b> '+esc(s.desc||"");}
-function instHeader(){var id=S.identitas;return '<div class="kop2">'+(id.logo?'<img src="'+id.logo+'" style="height:54px;display:block;margin:0 auto 4px">':'')+esc(id.kementerian||"")+'<br><b>'+esc(id.pt||"")+'</b><br>'+esc(id.fakultas||"")+'<br><b>PROGRAM STUDI '+esc((id.prodi||"").toUpperCase())+'</b><br><span style="font-size:9px">'+esc(id.alamat||"")+'</span></div><hr>';}
-function coverDoc(){var id=S.identitas;var sks=sksTotal();return '<div class="cover">'+(id.logo?'<img src="'+id.logo+'" style="height:72px;margin-bottom:12px"><br>':'')+'<div style="font-size:12px;font-weight:700;letter-spacing:.04em">KELENGKAPAN MATA KULIAH BERBASIS LEARNING OUTCOME (LO)</div>'+'<div style="font-size:23px;font-weight:700;margin:16px 0 2px">'+esc(id.namaMK||"\u2014")+'</div>'+(id.namaMKen?'<div style="font-style:italic;font-size:13px">'+esc(id.namaMKen)+'</div>':'')+'<div style="font-size:11px;margin-top:6px">Kode: '+esc(id.kodeMK||"-")+' \u00b7 '+esc(sks||"0")+' SKS \u00b7 Semester '+esc(id.semester||"-")+'</div>'+'<div style="margin-top:30px;line-height:1.6">'+esc(id.prodi||"")+'<br>'+esc(id.fakultas||"")+'<br>'+esc(id.pt||"")+'</div></div>';}
-function groupCPL(){var order=[],map={};S.cpl.forEach(function(c){var k=c.kelompok||"Lainnya";if(!map[k]){map[k]=[];order.push(k);}map[k].push(c);});return {order:order,map:map};}
-function sec1(){var h='<div class="secttl pgbreak">1. LEARNING OUTCOME (CAPAIAN PEMBELAJARAN)</div>';
- h+='<div class="subttl">A. Profil Lulusan</div>';
- h+='<table><tr><th style="width:36px">No</th><th style="width:230px">Profil Lulusan</th><th>Deskripsi</th></tr>'+(S.profil.map(function(p,i){return '<tr><td class="c">'+(i+1)+'</td><td><b>'+esc(p.profil)+'</b></td><td>'+esc(p.deskripsi)+'</td></tr>';}).join("")||'<tr><td colspan="3" class="muted">\u2014</td></tr>')+'</table>';
- h+='<div class="subttl">B. Capaian Pembelajaran (CPL \u2192 CPMK \u2192 Sub-CPMK)</div>';
- var g=groupCPL();var cplBody='';if(!S.cpl.length){cplBody='<tr><td colspan="2" class="muted">\u2014</td></tr>';}else{g.order.forEach(function(k){cplBody+='<tr class="sec"><td colspan="2">'+esc(k)+'</td></tr>';g.map[k].forEach(function(c){cplBody+='<tr><td><b>'+esc(c.kode)+'</b></td><td>'+esc(c.desc)+'</td></tr>';});});}
- h+='<table><tr><th style="width:150px">Kelompok / Kode</th><th>Rumusan</th></tr>'+cplBody+'</table>';
- h+='<table><tr><th style="width:80px">CPMK</th><th>Rumusan</th><th style="width:110px">CPL Didukung</th></tr>'+(S.cpmk.map(function(c){return '<tr><td class="c"><b>'+esc(c.kode)+'</b></td><td>'+esc(c.desc)+'</td><td class="c">'+esc((c.cpl||[]).join(", "))+'</td></tr>';}).join("")||'<tr><td colspan="3" class="muted">\u2014</td></tr>')+'</table>';
- h+='<table><tr><th style="width:90px">Sub-CPMK</th><th>Kemampuan Akhir</th><th style="width:50px">Tahap</th><th style="width:70px">CPMK</th></tr>'+(S.subcpmk.map(function(s){return '<tr><td class="c"><b>'+esc(s.kode)+'</b></td><td>'+esc(s.desc)+'</td><td class="c">'+esc(s.level)+'</td><td class="c">'+esc(s.cpmk)+'</td></tr>';}).join("")||'<tr><td colspan="4" class="muted">\u2014</td></tr>')+'</table>';
- return h;}
-function sec2(){var h='<div class="secttl pgbreak">2. ANALISIS INSTRUKSIONAL</div>';
- h+='<div class="aibox" style="background:#dde9e1"><b>CAPAIAN PUNCAK MATA KULIAH</b><br>'+nl2br(S.aiCapaian||"\u2014")+'</div>';
- if(S.aiRows.length)h+='<div class="aiarrow">\u25b2</div>';
- S.aiRows.forEach(function(r,i){if(r.type==="divider"){var lab=(r.label||"").replace(/^[\u2014\s]+|[\u2014\s]+$/g,"");h+='<div class="aibox" style="background:#f6e9e9;font-weight:700">\u2014 '+esc(lab)+' \u2014</div>';}else{var bx=(r.boxes||[]).filter(function(b){return b&&b.trim();});h+='<div class="aibox"><b>'+esc(r.label||"")+'</b>'+(bx.length?'<br>'+bx.map(function(b){return nl2br(b);}).join("<br>"):"")+'</div>';}if(i<S.aiRows.length-1)h+='<div class="aiarrow">\u25b2</div>';});
- return h;}
-function cpListCell(arr,key){return arr.length?arr.map(function(c){return '<div><b>'+esc(c.kode)+'</b> '+esc(c[key])+'</div>';}).join(""):'<span class="muted">\u2014</span>';}
-function olCell(arr){var a=(arr||[]).filter(function(v){return v&&v.trim();});return a.length?'<ol style="margin:0;padding-left:16px">'+a.map(function(v){return '<li>'+nl2br(v)+'</li>';}).join("")+'</ol>':'<span class="muted">\u2014</span>';}
-function sec3(){var id=S.identitas;var sks=sksTotal();var h='<div class="secttl pgbreak">3. RENCANA PEMBELAJARAN SEMESTER (RPS)</div>';
- h+=instHeader();
- h+='<table class="idt">';
- h+='<tr><th style="width:150px">Mata Kuliah</th><td>'+esc(id.namaMK)+(id.namaMKen?' / <i>'+esc(id.namaMKen)+'</i>':"")+'</td><th style="width:110px">Kode</th><td style="width:140px">'+esc(id.kodeMK)+'</td></tr>';
- h+='<tr><th>Rumpun MK</th><td>'+esc(id.rumpun)+'</td><th>Bobot (SKS)</th><td>'+esc(sks||"0")+' SKS</td></tr>';
- h+='<tr><th>Semester</th><td>'+esc(id.semester)+'</td><th>Tgl Penyusunan</th><td>'+esc(id.tglSusun)+'</td></tr>';
- h+='<tr><th>Mata Kuliah Prasyarat</th><td colspan="3">'+esc(id.prasyarat||"\u2014")+'</td></tr>';
- h+='<tr><th class="c">Dosen Pengembang RPS</th><th class="c">Koordinator RMK</th><th class="c">Unit Penjaminan Mutu</th><th class="c">Ketua Program Studi</th></tr>';
- h+='<tr class="c"><td style="height:30px">'+esc(S.otorisasi.dosenPengembang)+'</td><td>'+esc(S.otorisasi.koordinator)+'</td><td>'+esc(S.otorisasi.unitMutu)+'</td><td>'+esc(S.otorisasi.kaprodi)+'</td></tr>';
- h+='<tr><td colspan="4" class="sec c">Capaian Pembelajaran (CP)</td></tr>';
- h+='<tr><th>CPL</th><td colspan="3">'+cpListCell(S.cpl,"desc")+'</td></tr>';
- h+='<tr><th>CPMK</th><td colspan="3">'+cpListCell(S.cpmk,"desc")+'</td></tr>';
- h+='<tr><th>Sub-CPMK</th><td colspan="3">'+cpListCell(S.subcpmk,"desc")+'</td></tr>';
- h+='<tr><th>Deskripsi Singkat MK</th><td colspan="3">'+nl2br(id.deskripsiID||"\u2014")+(id.deskripsiEN?'<br><br><i>'+nl2br(id.deskripsiEN)+'</i>':"")+'</td></tr>';
- h+='<tr><th>Bahan Kajian / Materi</th><td colspan="3">'+olCell(S.bahan)+'</td></tr>';
- h+='<tr><th>Pustaka Utama</th><td colspan="3">'+olCell(S.pUtama)+'</td></tr>';
- h+='<tr><th>Pustaka Pendukung</th><td colspan="3">'+olCell(S.pBuku)+'</td></tr>';
- h+='<tr><th>Dosen Pengampu</th><td colspan="3">'+esc(id.pengampu||"\u2014")+'</td></tr>';
- h+='<tr><th>Media Pembelajaran</th><td colspan="3">'+esc(id.media||"\u2014")+'</td></tr>';
- h+='</table>';
- h+='<table class="wk"><tr><th style="width:26px">Mg</th><th>Sub-CPMK (Kemampuan Akhir)</th><th>Indikator</th><th style="width:70px">Kriteria &amp; Bentuk Penilaian</th><th>Metode Pembelajaran (Luring)</th><th>Metode (Daring)</th><th>Materi Pembelajaran</th><th style="width:34px">Bobot</th></tr>';
- var tot=0;
- h+=S.weeks.map(function(w){tot+=num(w.bobot);if(w.exam){var lab=w.mat||(w.mg===8?"Ujian Tengah Semester (UTS)":"Ujian Akhir Semester (UAS)");return '<tr style="background:#f2f2f2"><td class="c">'+w.mg+'</td><td><b>'+esc(lab)+'</b></td><td class="c">\u2026</td><td class="c">\u2026</td><td class="c">\u2026</td><td class="c">\u2026</td><td>'+esc(lab)+'</td><td class="c">'+(w.bobot?esc(w.bobot)+'%':"")+'</td></tr>';}return '<tr><td class="c">'+w.mg+'</td><td>'+(w.sub?subCell(w.sub):'<span class="muted">\u2026</span>')+'</td><td>'+nl2br(w.ind)+'</td><td>'+nl2br(w.kri)+'</td><td>'+nl2br(w.luring)+'</td><td>'+nl2br(w.daring)+'</td><td>'+nl2br(w.mat)+'</td><td class="c">'+(w.bobot?esc(w.bobot)+'%':"")+'</td></tr>';}).join("");
- h+='<tr><th colspan="7" style="text-align:right">Total Bobot</th><th class="c">'+round2(tot)+'%</th></tr>';
- h+='</table>';
- return h;}
-function sec4(){return '<div class="secttl pgbreak">4. RENCANA KEGIATAN PEMBELAJARAN</div><table><tr><th style="width:40px">Pert.</th><th>Kemampuan Akhir</th><th>Topik / Pokok Bahasan</th><th style="width:120px">Bahan Ajar &amp; Aktivitas</th><th style="width:90px">Referensi</th></tr>'+(S.kegiatan.map(function(k){return '<tr><td class="c">'+esc(k.ke)+'</td><td>'+nl2br(k.kemampuan)+'</td><td>'+nl2br(k.topik)+'</td><td>'+nl2br(k.bahanAjar)+'</td><td>'+nl2br(k.referensi)+'</td></tr>';}).join("")||'<tr><td colspan="5" class="muted">\u2014</td></tr>')+'</table>';}
-function matrixDoc(store,cols,title){var h='<div class="subttl">'+title+'</div><table style="font-size:8.5px"><tr><th>Sub-CPMK</th>'+cols.map(function(c){return '<th class="c">'+esc(c[1])+'</th>';}).join("")+'</tr>';h+=(S.subcpmk.map(function(s){var row=S[store][s.kode]||{};return '<tr><td><b>'+esc(s.kode)+'</b></td>'+cols.map(function(c){return '<td class="c">'+(row[c[0]]?"\u2713":"")+'</td>';}).join("")+'</tr>';}).join("")||'<tr><td colspan="'+(cols.length+1)+'" class="muted">\u2014</td></tr>')+'</table>';return h;}
-function sec5(){return '<div class="secttl pgbreak">5. METODE PEMBELAJARAN</div>'+matrixDoc("metode",METODE_COLS,"Matriks Metode Pembelajaran per Sub-CPMK");}
-function sec6(){return '<div class="secttl pgbreak">6. RANCANGAN TUGAS MAHASISWA</div><table><tr><th style="width:34px">No</th><th style="width:90px">Sub-CPMK</th><th>Indikator</th><th>Bentuk Tugas</th><th style="width:90px">Waktu</th></tr>'+(S.tugas.map(function(t,i){return '<tr><td class="c">'+(i+1)+'</td><td class="c">'+esc(t.sub)+'</td><td>'+nl2br(t.ind)+'</td><td>'+nl2br(t.bentuk)+'</td><td>'+esc(t.waktu)+'</td></tr>';}).join("")||'<tr><td colspan="5" class="muted">\u2014</td></tr>')+'</table>';}
-function sec7(){var h='<div class="secttl pgbreak">7. RANCANGAN PENILAIAN</div>';
- h+=matrixDoc("matnilai",NILAI_COLS,"Matriks Teknik Penilaian per Sub-CPMK");
- var tn=0;h+='<div class="subttl">Format &amp; Bobot Penilaian</div><table><tr><th style="width:34px">No</th><th>Komponen</th><th style="width:80px">Bobot</th></tr>'+(S.nilai.map(function(n,i){tn+=num(n.b);return '<tr><td class="c">'+(i+1)+'</td><td>'+esc(n.k)+'</td><td class="c">'+esc(n.b)+'%</td></tr>';}).join("")||'<tr><td colspan="3" class="muted">\u2014</td></tr>')+'<tr><th colspan="2" style="text-align:right">Total</th><th class="c">'+round2(tn)+'%</th></tr></table>';
- h+='<div class="subttl">Konversi Nilai (PAP)</div><table><tr><th style="width:120px">Nilai Huruf</th><th>Rentang Skor</th></tr>'+S.grades.map(function(g){return '<tr><td class="c"><b>'+esc(g.huruf)+'</b></td><td class="c">'+esc(g.min)+' \u2013 '+esc(g.max)+'</td></tr>';}).join("")+'</table>';
- return h;}
-function rubrikTbl(arr){return '<table><tr><th style="width:130px">Kriteria</th><th>Excellent</th><th>Average</th><th>Limited</th><th style="width:46px">Bobot</th></tr>'+(arr.map(function(r){return '<tr><td><b>'+esc(r.kriteria)+'</b></td><td>'+nl2br(r.ex)+'</td><td>'+nl2br(r.av)+'</td><td>'+nl2br(r.li)+'</td><td class="c">'+esc(r.p)+'</td></tr>';}).join("")||'<tr><td colspan="5" class="muted">\u2014</td></tr>')+'</table>';}
-function sec8(){var h='<div class="secttl pgbreak">8. RUBRIK PENILAIAN</div>';
- h+='<div class="subttl">A. Rubrik Sikap</div>'+rubrikTbl(S.rsikap);
- h+='<div class="subttl">B. Rubrik Partisipasi</div>'+rubrikTbl(S.rpart);
- if(S.rubrik&&S.rubrik.length){S.rubrik.forEach(function(r){var tgt=r.target?" ("+r.target.replace(":"," ")+")":"";h+='<div class="subttl">Rubrik Analitik: '+esc(r.judul||"\u2014")+esc(tgt)+'</div><table style="font-size:8.5px"><tr><th>Kriteria</th><th style="width:40px">Bobot</th>'+r.skala.map(function(sk){return '<th>'+esc(sk.label)+' ('+esc(sk.score)+')</th>';}).join("")+'</tr>'+r.kriteria.map(function(kr){return '<tr><td><b>'+esc(kr.nama)+'</b></td><td class="c">'+esc(kr.bobot)+'</td>'+r.skala.map(function(sk,si){return '<td>'+nl2br((kr.desc||{})[si]||"")+'</td>';}).join("")+'</tr>';}).join("")+'</table>';});}
- return h;}
-function papHoriz(){return '<table style="font-size:9px"><tr>'+S.grades.map(function(g){return '<th class="c">'+esc(g.huruf)+'</th>';}).join("")+'</tr><tr>'+S.grades.map(function(g){return '<td class="c">'+esc(g.min)+'\u2013'+esc(g.max)+'</td>';}).join("")+'</tr></table>';}
-function sec9(){var id=S.identitas;var sks=sksTotal();var h='<div class="secttl pgbreak">9. KONTRAK PERKULIAHAN</div>';
- h+=instHeader();
- h+='<table class="idt"><tr><th style="width:150px">Mata Kuliah</th><td>'+esc(id.namaMK)+'</td><th style="width:90px">Kode / SKS</th><td>'+esc(id.kodeMK)+' / '+esc(sks||"0")+' SKS</td></tr>';
- h+='<tr><th>Semester</th><td>'+esc(id.semester)+'</td><th>Dosen</th><td>'+esc(id.pengampu||S.otorisasi.dosenPengembang)+'</td></tr>';
- h+='<tr><th>Pendekatan</th><td>'+esc(id.pendekatan||"\u2014")+'</td><th>Media</th><td>'+esc(id.media||"\u2014")+'</td></tr>';
- h+='<tr><td colspan="4" class="sec c">Capaian Pembelajaran Mata Kuliah (CPMK)</td></tr>';
- h+=(S.cpmk.map(function(c){return '<tr><th>'+esc(c.kode)+'</th><td colspan="3">'+esc(c.desc)+'</td></tr>';}).join("")||'<tr><td colspan="4" class="muted">\u2014</td></tr>');
- h+='<tr><th>Deskripsi Mata Kuliah</th><td colspan="3">'+nl2br(id.deskripsiID||"\u2014")+'</td></tr>';
- h+='</table>';
- h+='<div class="subttl">Komponen &amp; Bobot Evaluasi</div>';
- var tn=0;h+='<table><tr><th>Komponen</th><th style="width:80px">Bobot</th></tr>'+(S.nilai.map(function(n){tn+=num(n.b);return '<tr><td>'+esc(n.k)+'</td><td class="c">'+esc(n.b)+'%</td></tr>';}).join("")||'<tr><td colspan="2" class="muted">\u2014</td></tr>')+'<tr><th style="text-align:right">Total</th><th class="c">'+round2(tn)+'%</th></tr></table>';
- h+='<div class="subttl">Konversi Nilai</div>'+papHoriz();
- h+='<div class="subttl">Materi Perkuliahan (Garis Besar)</div><table><tr><th style="width:40px">Mg</th><th>Topik</th></tr>'+S.weeks.map(function(w){var t=w.exam?(w.mat||(w.mg===8?"UTS":"UAS")):(w.mat||(w.sub?subLabel(w.sub):"\u2026"));return '<tr><td class="c">'+w.mg+'</td><td>'+(w.exam?'<b>'+esc(t)+'</b>':nl2br(t))+'</td></tr>';}).join("")+'</table>';
- h+='<div class="subttl">Tata Tertib &amp; Catatan</div><div class="box">'+nl2br(S.kontrakCatatan||"\u2014")+'</div>';
- var pust=[].concat(S.pUtama||[],S.pBuku||[]).filter(function(v){return v&&v.trim();});
- h+='<div class="subttl">Daftar Pustaka</div>'+(pust.length?'<ol style="padding-left:18px">'+pust.map(function(v){return '<li>'+nl2br(v)+'</li>';}).join("")+'</ol>':'<p class="muted">\u2014</p>');
- return h;}
-function buildDoc(){return coverDoc()+sec1()+sec2()+sec3()+sec4()+sec5()+sec6()+sec7()+sec8()+sec9();}
-function renderPreview(){$("#rps-doc").innerHTML=buildDoc();}
-</script>
-<script>
-// ---------- Actions ----------
-$("#btnGo").addEventListener("click",function(){switchView("preview");renderPreview();});
+function subLabel(kode){var s=S.subcpmk.filter(function(x){return x.kode===kode})[0];return s?(s.kode+" "+(s.desc||"")):kode;}
+function olList(arr){var a=(arr||[]).filter(function(v){return v&&String(v).trim();});return a.length?'<ol style="margin:0;padding-left:16px">'+a.map(function(v){return '<li>'+nl2br(v)+'</li>';}).join("")+'</ol>':'<span class="muted">—</span>';}
+function olListI(arr){var a=(arr||[]).filter(function(v){return v&&String(v).trim();});return a.length?'<ol style="margin:0;padding-left:16px">'+a.map(function(v){return '<li><i>'+nl2br(v)+'</i></li>';}).join("")+'</ol>':'';}
+function ulList(arr){var a=(arr||[]).filter(function(v){return v&&String(v).trim();});return a.length?'<ul style="margin:0;padding-left:16px">'+a.map(function(v){return '<li>'+nl2br(v)+'</li>';}).join("")+'</ul>':'<span class="muted">—</span>';}
+function ulListI(arr){var a=(arr||[]).filter(function(v){return v&&String(v).trim();});return a.length?'<ul style="margin:0;padding-left:16px">'+a.map(function(v){return '<li><i>'+nl2br(v)+'</i></li>';}).join("")+'</ul>':'';}
+function cplGroups(){var ORDER=["Attitude","General Skills","Knowledge","Specific Skills"];var map={},order=[];S.cpl.forEach(function(c){var k=c.kelompok||"Lainnya";if(!map[k]){map[k]=[];order.push(k);}map[k].push(c);});var sorted=[];ORDER.forEach(function(k){if(map[k]){sorted.push({name:k,items:map[k]});}});order.forEach(function(k){if(ORDER.indexOf(k)<0)sorted.push({name:k,items:map[k]});});return sorted;}
+function metodeSummary(){var set={};S.subcpmk.forEach(function(s){var r=(S.metode||{})[s.kode]||{};Object.keys(r).forEach(function(k){if(r[k])set[k]=true;});});var out=[];METODE_COLS.forEach(function(p){if(set[p[0]])out.push(p[1]);});return out.join(", ")||"Ceramah, Diskusi";}
+function kop(title){var id=S.identitas;var logo=id.logo?'<img src="'+esc(id.logo)+'" style="height:64px">':'';return '<table class="nb" style="margin-bottom:2px"><tr>'+(logo?'<td style="width:78px;text-align:center;border:none">'+logo+'</td>':'')+'<td style="text-align:center;border:none">'+(id.kementerian?'<div style="font-size:9px">'+esc(id.kementerian)+'</div>':'')+'<div style="font-weight:bold">'+esc(id.pt||"")+'</div>'+(id.fakultas?'<div style="font-weight:bold">'+esc(id.fakultas)+'</div>':'')+'<div style="font-weight:bold">PROGRAM STUDI '+esc((id.prodi||"").toUpperCase())+'</div>'+(id.alamat?'<div style="font-size:8px">'+esc(id.alamat)+'</div>':'')+'</td></tr></table><div style="border-bottom:2px solid #000;margin-bottom:6px"></div>'+(title?'<div style="text-align:center;font-weight:bold;margin:6px 0">'+esc(title)+'</div>':'');}
+function kop9(){return kop("KONTRAK PERKULIAHAN (LEARNING CONTRACT)");}
+function lettRow(label,value){return '<tr><td style="width:200px;vertical-align:top;border:none">'+label+'</td><td style="width:12px;vertical-align:top;border:none">:</td><td style="border:none">'+(value||"")+'</td></tr>';}
+function coverDoc(){var id=S.identitas;var logo=id.logo?'<div style="margin:18px 0"><img src="'+esc(id.logo)+'" style="height:120px"></div>':'';return '<div class="cover"><div style="font-weight:bold;font-size:13pt">RENCANA PEMBELAJARAN SEMESTER (RPS)</div><div style="margin:4px 0 0">DAN PERANGKAT PEMBELAJARAN</div><div style="margin:26px 0 0;font-size:16pt;font-weight:bold">'+esc(id.namaMK||"")+'</div>'+(id.namaMKen?'<div style="font-style:italic">'+esc(id.namaMKen)+'</div>':'')+'<div style="margin:8px 0">Kode: '+esc(id.kodeMK||"-")+' &nbsp;|&nbsp; SKS: '+(sksTotal()||0)+' &nbsp;|&nbsp; Semester: '+esc(id.semester||"-")+'</div>'+logo+'<div style="margin-top:26px">Penyusun:</div><div style="font-weight:bold">'+esc(id.penyusun||"")+'</div><div style="margin-top:30px;font-weight:bold">PROGRAM STUDI '+esc((id.prodi||"").toUpperCase())+'</div><div style="font-weight:bold">'+esc(id.fakultas||"")+'</div><div style="font-weight:bold">'+esc(id.pt||"")+'</div><div style="margin-top:6px">'+esc(id.tahun||"")+'</div></div>';}
+function tocDoc(){var items=["1. Learning Outcome/CPMK","2. Analisis Instruksional / Pembelajaran","3. Rencana Pembelajaran Semester (RPS)","4. Rencana Kegiatan Pembelajaran","5. Metode Pembelajaran","6. Rancangan Tugas","7. Rancangan Penilaian","8. Rubrik Penilaian","9. Kontrak Kelas"];return '<div class="secttl pgbreak">DAFTAR ISI</div><table class="nb" style="font-size:10px;max-width:480px;margin:0 auto">'+items.map(function(t){return '<tr><td style="border:none;padding:3px 6px">'+esc(t)+'</td></tr>';}).join("")+'</table>';}
+function matrixDoc(store,cols,title){var data=S[store]||{};var h=title?'<p style="margin:6px 0 2px"><b>'+esc(title)+'</b></p>':'';h+='<table style="font-size:8px"><tr><th style="width:150px">Sub-CPMK</th>'+cols.map(function(p){return '<th>'+esc(p[1])+'</th>';}).join("")+'</tr>';h+=(S.subcpmk.map(function(s){var r=data[s.kode]||{};return '<tr><td><b>'+esc(s.kode)+'</b></td>'+cols.map(function(p){return '<td class="c">'+(r[p[0]]?"\u2713":"")+'</td>';}).join("")+'</tr>';}).join("")||'<tr><td colspan="'+(cols.length+1)+'" class="muted">\u2014</td></tr>')+'</table>';return h;}
+function sec7Matrix(){return matrixDoc("matnilai",NILAI_COLS,"");}
+function sec7Bobot(){var h='<p style="margin:10px 0 2px"><b>Bobot Penilaian per Komponen</b></p>';h+='<table style="font-size:9px"><tr><th style="width:160px">Basis Evaluasi</th><th>Komponen / Aktivitas</th><th style="width:70px">Kisaran</th><th style="width:60px">Bobot (%)</th></tr>';var tot=0;if(!S.nilai.length){h+='<tr><td colspan="4" class="muted">\u2014</td></tr>';}else{var groups={},order=[];S.nilai.forEach(function(n){var b=n.basis||"";if(!groups[b]){groups[b]=[];order.push(b);}groups[b].push(n);});order.forEach(function(b){var arr=groups[b];arr.forEach(function(n,i){tot+=num(n.bobot);h+='<tr>';if(i===0)h+='<td rowspan="'+arr.length+'"><b>'+esc(b)+'</b></td>';h+='<td>'+esc(n.komponen)+(n.descID?'<br><span style="font-size:8px;color:#555">'+esc(n.descID)+'</span>':"")+'</td><td class="c">'+esc(n.kisaran)+'</td><td class="c">'+esc(n.bobot)+'</td></tr>';});});}h+='<tr><th colspan="3" style="text-align:right">Total</th><th class="c">'+round2(tot)+'</th></tr></table>';return h;}
+function rubrikTbl(arr){var h='<table style="font-size:9px"><tr><th style="width:120px">Kriteria</th><th>Sangat Baik (Excellent)</th><th>Cukup (Average)</th><th>Kurang (Limited)</th><th style="width:70px">Pertemuan</th></tr>';h+=((arr||[]).map(function(r){return '<tr><td><b>'+esc(r.kriteria)+'</b></td><td>'+nl2br(r.ex)+'</td><td>'+nl2br(r.av)+'</td><td>'+nl2br(r.li)+'</td><td class="c">'+esc(r.p)+'</td></tr>';}).join("")||'<tr><td colspan="5" class="muted">\u2014</td></tr>')+'</table>';return h;}
+function sec1(){var id=S.identitas;var h='<div class="secttl pgbreak">1. LEARNING OUTCOME/CPMK</div>';h+='<p style="margin:6px 0 2px"><b>A. Profil Lulusan Program Studi '+esc(id.prodi||"")+'</b></p>';h+='<table><tr><th style="width:240px">Profil Lulusan</th><th>Deskripsi Profil</th></tr>'+(S.profil.map(function(p){return '<tr><td><b>'+esc(p.profil)+'</b></td><td>'+nl2br(p.deskripsi)+'</td></tr>';}).join("")||'<tr><td colspan="2" class="muted">—</td></tr>')+'</table>';h+='<p style="margin:10px 0 2px"><b>B. Capaian Pembelajaran Jurusan/Program Studi, Capaian Pembelajaran Mata Kuliah, dan Sub Capaian Pembelajaran Mata Kuliah</b></p>';var groups=cplGroups();var totalRows=Math.max(1,S.cpl.length);var cpmkCell=S.cpmk.length?('<ol style="margin:0;padding-left:16px">'+S.cpmk.map(function(c){return '<li>'+esc(c.desc)+(c.cpl&&c.cpl.length?' <b>('+esc(c.cpl.join(", "))+')</b>':'')+'</li>';}).join("")+'</ol>'):'<span class="muted">—</span>';var subCellAll=S.subcpmk.length?('<ol style="margin:0;padding-left:16px">'+S.subcpmk.map(function(s){return '<li>'+esc(s.desc)+'</li>';}).join("")+'</ol>'):'<span class="muted">—</span>';h+='<table style="font-size:9px"><tr><th style="width:80px">Kompetensi</th><th>Capaian Pembelajaran Jurusan / Program Studi</th><th style="width:200px">Capaian Pembelajaran Mata Kuliah</th><th style="width:200px">Sub – Capaian Pembelajaran Mata Kuliah</th></tr>';if(!S.cpl.length){h+='<tr><td class="muted">—</td><td class="muted">—</td><td>'+cpmkCell+'</td><td>'+subCellAll+'</td></tr>';}else{var first=true;groups.forEach(function(g){g.items.forEach(function(c,gi){h+='<tr>';if(gi===0)h+='<td rowspan="'+g.items.length+'"><i>'+esc(g.name)+'</i></td>';h+='<td><b>'+esc(c.kode)+'</b> '+esc(c.desc)+'</td>';if(first){h+='<td rowspan="'+totalRows+'">'+cpmkCell+'</td><td rowspan="'+totalRows+'">'+subCellAll+'</td>';first=false;}h+='</tr>';});});}h+='</table>';h+='<p style="margin:8px 0 2px"><b>Capaian Pembelajaran (Learning Outcome) Mata Kuliah '+esc(id.namaMK||"")+'</b></p>'+olList(S.cpmk.map(function(c){return c.desc+(c.cpl&&c.cpl.length?' ('+c.cpl.join(", ")+')':'');}));h+='<p style="margin:8px 0 2px"><b>Sub Capaian Pembelajaran (Learning Outcome) Mata Kuliah '+esc(id.namaMK||"")+'</b></p>'+olList(S.subcpmk.map(function(s){return s.desc;}));return h;}
+function sec2(){var h='<div class="secttl pgbreak">2. ANALISIS INSTRUKSIONAL / PEMBELAJARAN</div>';if(S.aiCapaian)h+='<div class="aibox" style="border-width:2px"><b>'+nl2br(S.aiCapaian)+'</b></div>';S.aiRows.forEach(function(r){h+='<div class="aiarrow">▲</div>';if(r.type==="divider"){h+='<div class="aibox" style="background:#f2f2f2"><b>'+nl2br(r.label||"")+'</b></div>';}else{var boxes=(r.boxes||[]).filter(function(b){return b&&b.trim();});if(r.label)h+='<div style="text-align:center;font-size:9px;color:#555;margin-top:4px"><i>'+nl2br(r.label)+'</i></div>';if(boxes.length===1){h+='<div class="aibox">'+nl2br(boxes[0])+'</div>';}else if(boxes.length>1){h+='<table class="nb"><tr>'+boxes.map(function(b){return '<td style="width:'+Math.floor(100/boxes.length)+'%"><div class="aibox" style="max-width:100%;margin:4px 2px">'+nl2br(b)+'</div></td>';}).join("")+'</tr></table>';}}});h+='<div class="box" style="text-align:center;margin-top:10px"><b>Diagram Alir Analisis Pembelajaran Mata Kuliah '+esc(S.identitas.namaMK||"")+'</b><br>Program Studi '+esc(S.identitas.prodi||"")+'</div>';return h;}
+function sec3(){var id=S.identitas;var h='<div class="secttl pgbreak">3. RENCANA PEMBELAJARAN SEMESTER (RPS)</div>';h+=kop("RENCANA PEMBELAJARAN SEMESTER (RPS/D)");var bobot='T = '+num(id.sksT)+'   P = '+num(id.sksP);h+='<table class="idt" style="font-size:9px">';h+='<tr><th class="c">MATA KULIAH (MK)</th><th class="c">KODE</th><th class="c">Rumpun MK</th><th class="c">BOBOT (sks)</th><th class="c">SEMESTER</th><th class="c">Tgl Penyusunan</th></tr>';h+='<tr class="c"><td>'+esc(id.namaMK)+'</td><td>'+esc(id.kodeMK)+'</td><td>'+esc(id.rumpun)+'</td><td>'+bobot+'</td><td>'+esc(id.semester)+'</td><td>'+esc(id.tglSusun)+'</td></tr>';h+='<tr><th rowspan="2" class="c">OTORISASI / PENGESAHAN</th><th colspan="2" class="c">Dosen Pengembang RPS</th><th colspan="2" class="c">Koordinator RMK</th><th class="c">Ketua Program Studi</th></tr>';h+='<tr class="c"><td colspan="2" style="height:38px">'+esc(S.otorisasi.dosenPengembang)+'</td><td colspan="2">'+esc(S.otorisasi.koordinator)+'</td><td>'+esc(S.otorisasi.kaprodi)+'</td></tr>';var cpRows=3+S.cpl.length+S.cpmk.length+S.subcpmk.length;h+='<tr><th rowspan="'+cpRows+'" style="width:90px">Capaian Pembelajaran (CP)</th><td colspan="5" class="sec">CPL-Prodi yang dibebankan pada MK</td></tr>';S.cpl.forEach(function(c){h+='<tr><td colspan="5"><b>'+esc(c.kode)+'</b> '+esc(c.desc)+'</td></tr>';});h+='<tr><td colspan="5" class="sec">Capaian Pembelajaran Mata Kuliah (CPMK)</td></tr>';S.cpmk.forEach(function(c){h+='<tr><td colspan="5"><b>'+esc(c.kode)+'</b> '+esc(c.desc)+'</td></tr>';});h+='<tr><td colspan="5" class="sec">CPL – Sub-CPMK</td></tr>';S.subcpmk.forEach(function(s){h+='<tr><td colspan="5"><b>'+esc(s.kode)+'</b> '+esc(s.desc)+'</td></tr>';});h+='<tr><th>Deskripsi Singkat MK</th><td colspan="5"><table class="inner" style="margin:0"><tr><td style="width:50%">'+nl2br(id.deskripsiID||"—")+'</td><td><i>'+nl2br(id.deskripsiEN||"")+'</i></td></tr></table></td></tr>';h+='<tr><th>Bahan Kajian: Materi Pembelajaran</th><td colspan="5"><table class="inner" style="margin:0"><tr><td style="width:50%">'+olList(S.bahan.map(function(b){return b.id;}))+'</td><td>'+olListI(S.bahan.map(function(b){return b.en;}))+'</td></tr></table></td></tr>';h+='<tr><th>Pustaka: Utama</th><td colspan="5">'+olList(S.pUtama)+'</td></tr>';if(S.pBuku.length)h+='<tr><th>Pustaka: Pendukung</th><td colspan="5">'+olList(S.pBuku)+'</td></tr>';h+='<tr><th>Dosen Pengampu</th><td colspan="5">'+esc(id.pengampu||"—")+'</td></tr>';h+='<tr><th>Mata Kuliah Prasyarat</th><td colspan="5">'+esc(id.prasyarat||"-")+'</td></tr>';h+='</table>';h+='<table class="wk"><tr><th rowspan="2" style="width:24px">Mg Ke-</th><th rowspan="2" style="width:120px">Sub-CPMK (Kemampuan akhir tiap tahapan belajar)</th><th colspan="2">Penilaian</th><th colspan="2">Bentuk Pembelajaran; Metode Pembelajaran; Penugasan</th><th rowspan="2">Materi Pembelajaran</th><th rowspan="2" style="width:34px">Bobot Penilaian (%)</th></tr>';h+='<tr><th>Indikator</th><th>Kriteria & Bentuk</th><th>Tatap muka / Luring</th><th>Daring</th></tr>';h+='<tr class="c">'+["(1)","(2)","(3)","(4)","(5)","(6)","(7)","(8)"].map(function(n){return '<td>'+n+'</td>';}).join("")+'</tr>';var tot=0;S.weeks.forEach(function(w){tot+=num(w.bobot);if(w.exam){var lab=w.mat||(w.mg===8?"Ujian Tengah Semester (UTS)":"Ujian Akhir Semester (UAS)");h+='<tr style="background:#f2f2f2"><td class="c">'+w.mg+'</td><td colspan="6" class="c"><b>'+esc(lab)+'</b></td><td class="c">'+(w.bobot?esc(w.bobot)+'%':"")+'</td></tr>';}else{var mat=nl2br(w.mat)+(w.matEN?'<br><i>'+nl2br(w.matEN)+'</i>':"");h+='<tr><td class="c">'+w.mg+'</td><td>'+(w.sub?subCell(w.sub):'<span class="muted">…</span>')+'</td><td>'+nl2br(w.ind)+'</td><td>'+nl2br(w.kri)+'</td><td>'+nl2br(w.luring)+'</td><td>'+nl2br(w.daring)+'</td><td>'+mat+'</td><td class="c">'+(w.bobot?esc(w.bobot)+'%':"")+'</td></tr>';}});h+='<tr><th colspan="7" style="text-align:right">Total Bobot</th><th class="c">'+round2(tot)+'%</th></tr></table>';return h;}
+function sec4(){var id=S.identitas;var sks=sksTotal();var h='<div class="secttl pgbreak">4. RENCANA KEGIATAN PEMBELAJARAN</div>';h+=kop("RENCANA KEGIATAN PEMBELAJARAN");if(!S.kegiatan.length)return h+'<p class="muted">—</p>';S.kegiatan.forEach(function(k){h+='<table class="idt" style="margin-top:8px;font-size:9px"><tr><th style="width:210px">Pembelajaran Ke-</th><td>'+esc(k.ke)+'</td></tr><tr><th>Nama Mata Kuliah</th><td>'+esc(id.namaMK)+'</td></tr><tr><th>Kode Mata Kuliah / sks</th><td>'+esc(id.kodeMK)+' / '+(sks||0)+' SKS</td></tr><tr><th>Nama Pengembang</th><td>'+esc(S.otorisasi.dosenPengembang||id.penyusun)+'</td></tr><tr><th>Kemampuan Akhir yang Diharapkan</th><td>'+(k.sub?subCell(k.sub):esc(k.kemampuan||"—"))+'</td></tr></table>';var sintak=lines(k.sintak);var aktiv='<b>1. Bentuk Pembelajaran:</b> '+esc(k.bentuk||"Tatap muka")+'<br><b>2. Model:</b> '+esc(k.model||"")+'<br><b>3. Metode:</b> '+esc(k.metode||"")+'<br><b>Sintak Pembelajaran:</b>'+(sintak.length?'<ol style="margin:0;padding-left:16px">'+sintak.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ol>':' —')+'<b>4. Bahan Ajar:</b> '+esc(k.bahanAjar||"")+'<br><b>5. Penilaian:</b> '+esc(k.penilaian||"");var topik=ulList(lines(k.topik))+ulListI(lines(k.topikEN));h+='<table style="font-size:9px"><tr><th style="width:80px">Bahan Pelajaran Ke-</th><th style="width:150px">Topik</th><th>Bahan Ajar dan Aktivitas Pembelajaran</th><th style="width:140px">Referensi dan Sumber Lain</th></tr><tr><td class="c">'+esc(k.ke)+'</td><td>'+topik+'</td><td>'+aktiv+'</td><td>'+ulList(lines(k.referensi))+'</td></tr></table>';});return h;}
+function sec5(){var h='<div class="secttl pgbreak">5. METODE PEMBELAJARAN</div>';h+='<p style="margin:6px 0 2px">Pemetaan metode/model pembelajaran terhadap setiap Sub-CPMK Mata Kuliah '+esc(S.identitas.namaMK||"")+'.</p>';h+=matrixDoc("metode",METODE_COLS,"");return h;}
+function sec6(){var h='<div class="secttl pgbreak">6. RANCANGAN TUGAS</div>';h+='<table style="font-size:9px"><tr><th style="width:40px">Tugas ke-</th><th style="width:200px">Sub-CPMK</th><th>Indikator</th><th>Bentuk Tugas</th><th style="width:120px">Waktu Pengumpulan Tugas</th></tr>';h+=(S.tugas.map(function(t,i){return '<tr><td class="c">'+(i+1)+'</td><td>'+(t.sub?subCell(t.sub):'<span class="muted">—</span>')+'</td><td>'+nl2br(t.ind)+'</td><td>'+nl2br(t.bentuk)+'</td><td>'+nl2br(t.waktu)+'</td></tr>';}).join("")||'<tr><td colspan="5" class="muted">—</td></tr>')+'</table>';return h;}
+function sec7(){var id=S.identitas;var h='<div class="secttl pgbreak">7. RANCANGAN PENILAIAN</div>';h+='<p style="margin:6px 0 2px"><b>Matriks Teknik Penilaian terhadap Sub-CPMK</b></p>'+sec7Matrix();h+=sec7Bobot();return h;}
+function sec8(){var h='<div class="secttl pgbreak">8. RUBRIK PENILAIAN</div>';h+='<p style="margin:6px 0 2px"><b>Rubrik Penilaian Sikap</b></p>'+rubrikTbl(S.rsikap);h+='<p style="margin:8px 0 2px"><b>Rubrik Penilaian Partisipasi di Kelas</b></p>'+rubrikTbl(S.rpart);if(S.rubrik&&S.rubrik.length){S.rubrik.forEach(function(r){h+='<p style="margin:8px 0 2px"><b>'+esc(r.judul||"Rubrik Analitik")+'</b>'+(r.target?' <span class="muted">('+esc(r.target.replace(":",": "))+')</span>':'')+'</p>';h+='<table style="font-size:9px"><tr><th style="width:130px">Kriteria</th><th style="width:50px">Bobot %</th>'+r.skala.map(function(sk){return '<th>'+esc(sk.label)+' ('+esc(sk.score)+')</th>';}).join("")+'</tr>'+(r.kriteria.map(function(kr){return '<tr><td><b>'+esc(kr.nama)+'</b></td><td class="c">'+esc(kr.bobot)+'</td>'+r.skala.map(function(sk,si){return '<td>'+nl2br((kr.desc||{})[si]||"")+'</td>';}).join("")+'</tr>';}).join("")||'<tr><td colspan="'+(r.skala.length+2)+'" class="muted">—</td></tr>')+'</table>';});}return h;}
+function sec9(){var id=S.identitas;var sks=sksTotal();var h='<div class="secttl pgbreak">9. KONTRAK KELAS</div>';h+=kop9();h+='<p style="margin:6px 0 2px"><b>A. Identitas Mata Kuliah</b></p><table class="nb">'+lettRow("Nama Mata Kuliah",esc(id.namaMK))+lettRow("Kode Mata Kuliah",esc(id.kodeMK))+lettRow("Bobot SKS",(sks||0)+" SKS")+lettRow("Semester",esc(id.semester))+lettRow("Mata Kuliah Prasyarat",esc(id.prasyarat||"-"))+lettRow("Dosen Pengampu",esc(id.pengampu||S.otorisasi.dosenPengembang))+'</table>';h+='<p style="margin:8px 0 2px"><b>B. Capaian Pembelajaran Mata Kuliah</b></p>'+olList(S.cpmk.map(function(c){return c.desc;}));h+='<p style="margin:8px 0 2px"><b>C. Deskripsi Isi / Materi Mata Kuliah</b></p><p>'+nl2br(id.deskripsiID||"—")+'</p>'+(id.deskripsiEN?'<p><i>'+nl2br(id.deskripsiEN)+'</i></p>':"");h+='<p style="margin:8px 0 2px"><b>D. Pendekatan Pembelajaran (secara umum)</b></p><table class="nb">'+lettRow("Pendekatan",esc(id.pendekatan||"—"))+lettRow("Metode",esc(metodeSummary()))+'</table>';h+='<p style="margin:8px 0 2px"><b>E. Media atau Alat Bantu Belajar</b></p><p>'+esc(id.media||"—")+'</p>';h+='<p style="margin:8px 0 2px"><b>F. Evaluasi Hasil Belajar Mahasiswa</b></p>';h+='<p style="margin:0 0 2px">a. Kriteria Penilaian</p><table style="width:auto;font-size:9px"><tr><th style="width:24px">No</th><th>Komponen Penilaian</th><th style="width:70px">Bobot (%)</th></tr>';var tn=0;h+=(S.nilai.map(function(n,i){tn+=num(n.bobot);return '<tr><td class="c">'+(i+1)+'</td><td>'+esc(n.komponen)+'</td><td class="c">'+esc(n.bobot)+'</td></tr>';}).join("")||'<tr><td colspan="3" class="muted">—</td></tr>')+'<tr><th colspan="2" style="text-align:right">JUMLAH</th><th class="c">'+round2(tn)+'</th></tr></table>';h+='<p style="margin:6px 0 2px">b. Konversi Nilai</p><table style="width:auto;font-size:9px"><tr><th>Skor yang Dicapai</th><th>Nilai</th></tr>'+S.grades.map(function(g){return '<tr><td class="c">'+esc(g.min)+' – '+esc(g.max)+'</td><td class="c"><b>'+esc(g.huruf)+'</b></td></tr>';}).join("")+'</table>';h+='<p style="margin:8px 0 2px"><b>G. Rincian Isi / Materi Kuliah Setiap Pertemuan (secara garis besar)</b></p><table style="font-size:9px"><tr><th style="width:60px">Pertemuan ke</th><th>Topik Pembahasan</th></tr>'+S.weeks.map(function(w){var t=w.exam?('<b>'+esc(w.mat||(w.mg===8?"Ujian Tengah Semester (UTS)":"Ujian Akhir Semester (UAS)"))+'</b>'):(nl2br(w.mat)+(w.matEN?'<br><i>'+nl2br(w.matEN)+'</i>':""));return '<tr><td class="c">'+w.mg+'</td><td>'+t+'</td></tr>';}).join("")+'</table>';h+='<p style="margin:8px 0 2px"><b>H. Daftar Pustaka</b></p>'+olList([].concat(S.pUtama||[],S.pBuku||[]));if(S.kontrakCatatan)h+='<p style="margin:8px 0 2px"><b>I. Tata Tertib & Catatan</b></p><div class="box">'+nl2br(S.kontrakCatatan)+'</div>';return h;}
+function buildDoc(){return coverDoc()+tocDoc()+sec1()+sec2()+sec3()+sec4()+sec5()+sec6()+sec7()+sec8()+sec9();}
+function renderPreview(){var el=$("#rps-doc");try{el.innerHTML=buildDoc();}catch(e){el.innerHTML='<p style="color:#c00">Gagal membuat pratinjau: '+esc(e.message)+'</p>';}}
+$("#btnGo").addEventListener("click",function(){switchView("preview");});
 $("#btnRefresh").addEventListener("click",function(){renderPreview();toast("Pratinjau diperbarui.");});
 $("#btnPrint").addEventListener("click",function(){renderPreview();window.print();});
-$("#btnSave").addEventListener("click",function(){syncActive();var blob=new Blob([JSON.stringify({_export:"rps_obe_v3",course:activeCourse().name,data:S},null,2)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="RPS-"+((S.identitas.namaMK||"data").replace(/[^a-z0-9]+/gi,"_"))+".json";a.click();toast("Data diekspor.");});
-$("#btnLoad").addEventListener("click",function(){$("#fileInput").click();});
-$("#fileInput").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var p=JSON.parse(r.result);var data=p.data||p;S=normalize(data);var c=activeCourse();c.data=S;c.name=S.identitas.namaMK||c.name;persist();refreshCourseSel();bindAll();renderAll();toast("Data diimpor.");}catch(err){alert("File tidak valid: "+err.message);}};r.readAsText(f);e.target.value="";});
-function docToWord(){renderPreview();var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>RPS</title><style>@page{size:A4 portrait;margin:1.5cm}body{font-family:"Times New Roman",serif;font-size:9pt}table{border-collapse:collapse;width:100%;margin:5px 0}td,th{border:1px solid #000;padding:3px 5px;vertical-align:top}th{background:#e9e9e9;text-align:center}.secttl{text-align:center;font-weight:bold;font-size:12pt;margin:12px 0 6px;text-transform:uppercase}.subttl{font-weight:bold;margin:8px 0 3px}.c{text-align:center}.sec{background:#dde9e1;font-weight:bold}.cover{text-align:center;border:2px solid #000;padding:40px 10px;margin-bottom:10px}.kop2{text-align:center;line-height:1.35;margin-bottom:2px}hr{border:none;border-top:1px solid #888;margin:3px 0 8px}.box{border:1px solid #000;padding:6px 8px}.aibox{border:1px solid #000;padding:5px;margin:5px auto;text-align:center}.aiarrow{text-align:center}.muted{color:#777}.pgbreak{page-break-before:always}table.idt th{text-align:left}table.idt th.c{text-align:center}table.wk{font-size:8pt}</style></head><body>'+buildDoc()+'</body></html>';
- var blob=new Blob(["\ufeff",html],{type:"application/msword"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="RPS-"+((S.identitas.namaMK||"dokumen").replace(/[^a-z0-9]+/gi,"_"))+".doc";a.click();toast("Dokumen Word diunduh.");}
+function docToWord(){renderPreview();var inner=$("#rps-doc").innerHTML;var css='body{font-family:"Times New Roman",serif;font-size:10pt}table{border-collapse:collapse;width:100%;margin:6px 0}th,td{border:1px solid #000;padding:4px 6px;vertical-align:top;font-size:9pt}th{background:#e9e9e9;text-align:center}.c{text-align:center}.sec{background:#dde9e1;font-weight:bold}.muted{color:#777}.cover{text-align:center;border:2px solid #000;padding:40px}.secttl{text-align:center;font-weight:bold;font-size:12pt;margin:14px 0 8px}.aibox{border:1.5px solid #000;padding:6px;margin:6px auto;text-align:center}.aiarrow{text-align:center}.box{border:1px solid #000;padding:6px}table.nb,table.nb td,table.nb th{border:none}i{font-style:italic}@page{size:A4 portrait;margin:2cm}';var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><style>'+css+'</style></head><body>'+inner+'</body></html>';var blob=new Blob(['\ufeff'+html],{type:"application/msword"});var url=URL.createObjectURL(blob);var a=document.createElement("a");a.href=url;a.download=(S.identitas.namaMK||"RPS").replace(/[^a-z0-9]+/gi,"_")+"_RPS.doc";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url);},1000);toast("File Word diunduh.");}
 $("#btnWord").addEventListener("click",docToWord);
-$(["add-profil"]&&"#add-profil").addEventListener("click",function(){S.profil.push({profil:"",deskripsi:""});renderProfil();queueSave();});
-$("#add-cpl").addEventListener("click",function(){S.cpl.push({kode:"CPL-",kelompok:"",desc:""});renderCPL();renderCPMK();queueSave();});
+$("#btnSave").addEventListener("click",function(){syncActive();var blob=new Blob([JSON.stringify(LIB,null,2)],{type:"application/json"});var url=URL.createObjectURL(blob);var a=document.createElement("a");a.href=url;a.download="rps_obe_data.json";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url);},1000);toast("Data diekspor.");});
+$("#btnLoad").addEventListener("click",function(){$("#fileInput").click();});
+$("#fileInput").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var p=JSON.parse(r.result);if(p&&Array.isArray(p.courses)){LIB=p;LIB.courses.forEach(function(c){c.data=normalize(c.data);if(!c.id)c.id=uid();});if(!activeCourse())LIB.activeId=LIB.courses[0].id;S=activeCourse().data;}else{var c={id:uid(),name:(p.identitas&&p.identitas.namaMK)||"Impor",data:normalize(p)};LIB.courses.push(c);LIB.activeId=c.id;S=c.data;}persist();refreshCourseSel();bindAll();renderAll();switchView("identitas");toast("Data diimpor.");}catch(err){toast("Gagal membaca file: "+err.message);}};r.readAsText(f);e.target.value="";});
+$("#add-profil").addEventListener("click",function(){S.profil.push({profil:"",deskripsi:""});renderProfil();queueSave();});
+$("#add-cpl").addEventListener("click",function(){S.cpl.push({kode:"PLO "+(S.cpl.length+1),kelompok:"",desc:""});renderCPL();renderCPMK();queueSave();});
 $("#add-cpmk").addEventListener("click",function(){S.cpmk.push({kode:"CPMK"+(S.cpmk.length+1),desc:"",cpl:[],bobot:""});renderCPMK();renderSub();queueSave();});
 $("#add-sub").addEventListener("click",function(){S.subcpmk.push({kode:"Sub-CPMK-"+(S.subcpmk.length+1),level:"",desc:"",cpmk:""});renderSub();queueSave();});
-$("#add-bahan").addEventListener("click",function(){S.bahan.push("");renderSimple("bahan","list-bahan");queueSave();});
+$("#add-bahan").addEventListener("click",function(){S.bahan.push({id:"",en:""});renderBahan();queueSave();});
 $("#add-pUtama").addEventListener("click",function(){S.pUtama.push("");renderSimple("pUtama","list-pUtama");queueSave();});
 $("#add-pBuku").addEventListener("click",function(){S.pBuku.push("");renderSimple("pBuku","list-pBuku");queueSave();});
-$("#add-ai-stage").addEventListener("click",function(){S.aiRows.push({type:"stage",label:"Tahap "+(S.aiRows.filter(function(r){return r.type==="stage"}).length+1),boxes:[""]});renderAI();queueSave();});
-$("#add-ai-divider").addEventListener("click",function(){S.aiRows.push({type:"divider",label:"UJIAN TENGAH SEMESTER (UTS)",boxes:[]});renderAI();queueSave();});
-$("#add-kegiatan").addEventListener("click",function(){S.kegiatan.push({ke:String(S.kegiatan.length+1),kemampuan:"",topik:"",bahanAjar:"",referensi:""});renderKegiatan();queueSave();});
-$("#sync-kegiatan").addEventListener("click",function(){S.kegiatan=S.weeks.map(function(w){return{ke:String(w.mg),kemampuan:w.sub?subLabel(w.sub):(w.exam?"Ujian":""),topik:w.mat||"",bahanAjar:[w.luring,w.daring].filter(Boolean).join(" | "),referensi:""};});renderKegiatan();queueSave();toast("Kegiatan disamakan dengan minggu.");});
+$("#add-ai-stage").addEventListener("click",function(){S.aiRows.push({type:"stage",label:"",boxes:[""]});renderAI();queueSave();});
+$("#add-ai-divider").addEventListener("click",function(){S.aiRows.push({type:"divider",label:"UJIAN TENGAH SEMESTER (UTS)"});renderAI();queueSave();});
+$("#add-kegiatan").addEventListener("click",function(){S.kegiatan.push({ke:String(S.kegiatan.length+1),sub:"",kemampuan:"",topik:"",topikEN:"",bentuk:"Tatap muka",model:"",metode:"",sintak:"",bahanAjar:"",penilaian:"",referensi:""});renderKegiatan();queueSave();});
+$("#sync-kegiatan").addEventListener("click",function(){if(S.kegiatan.length&&!confirm("Ganti daftar pertemuan dengan data dari tabel mingguan?"))return;S.kegiatan=S.weeks.filter(function(w){return !w.exam;}).map(function(w){return {ke:String(w.mg),sub:w.sub||"",kemampuan:"",topik:w.mat||"",topikEN:w.matEN||"",bentuk:"Tatap muka",model:"Pembelajaran Kolaboratif",metode:"Ceramah, Diskusi",sintak:"",bahanAjar:"PPT (di-share pada Google Classroom)",penilaian:"Membuat resume materi kuliah",referensi:""};});renderKegiatan();queueSave();toast("Pertemuan dibuat dari minggu.");});
 $("#add-tugas").addEventListener("click",function(){S.tugas.push({sub:"",ind:"",bentuk:"",waktu:""});renderTugas();queueSave();});
-$("#add-nilai").addEventListener("click",function(){S.nilai.push({k:"",b:""});renderNilai();queueSave();});
-$("#add-grade").addEventListener("click",function(){S.grades.push({huruf:"",min:"",max:""});renderGrades();queueSave();});
+$("#add-nilai").addEventListener("click",function(){S.nilai.push({basis:"",komponen:"",kisaran:"",bobot:"",descID:"",descEN:""});renderNilai();queueSave();});
+$("#add-grade").addEventListener("click",function(){S.grades.push({huruf:"",min:0,max:0});renderGrades();queueSave();});
 $("#add-rsikap").addEventListener("click",function(){S.rsikap.push({kriteria:"",ex:"",av:"",li:"",p:""});renderRubrik("rsikap","tbody-rsikap");queueSave();});
 $("#add-rpart").addEventListener("click",function(){S.rpart.push({kriteria:"",ex:"",av:"",li:"",p:""});renderRubrik("rpart","tbody-rpart");queueSave();});
-</script>
-<script>
+$("#btnExample").addEventListener("click",function(){if(!confirm("Muat data contoh ke mata kuliah aktif? Data saat ini akan diganti."))return;S=normalize(exampleState());var c=activeCourse();c.data=S;c.name=S.identitas.namaMK;persist();refreshCourseSel();bindAll();renderAll();switchView("identitas");toast("Contoh dimuat.");});
 function exampleState(){var s=blankState();
- s.identitas={logo:"",kementerian:"Kementerian Pendidikan Tinggi, Sains, dan Teknologi",pt:"Universitas Siliwangi",fakultas:"Fakultas Agama Islam",prodi:"Manajemen Mutu Halal",alamat:"Jl. Siliwangi No. 24 Kota Tasikmalaya 46115",namaMK:"Pariwisata Halal",namaMKen:"Halal Tourism",kodeMK:"KJ80206401",kodeDokumen:"",noRevisi:"00",tglRevisi:"",rumpun:"Mata Kuliah Program Studi",sksT:"3",sksP:"0",semester:"4 (Genap)",tglSusun:"19 Januari 2026",minggu:"16",prasyarat:"—",deskripsiID:"Mata kuliah ini membahas konsep, prinsip, dan praktik pariwisata halal mulai dari ekosistem industri, regulasi dan sertifikasi, manajemen destinasi, hingga strategi pemasaran berbasis nilai-nilai syariah untuk membangun daya saing destinasi wisata halal.",deskripsiEN:"This course examines the concepts, principles, and practices of halal tourism, covering the industry ecosystem, regulation and certification, destination management, and sharia-based marketing strategies to build the competitiveness of halal tourism destinations.",pendekatan:"Konstruktivisme & Case-Based Learning",media:"WhatsApp Group, Google Classroom, Zoom",pengampu:"Lu'liyatul Mutmainah, S.E., M.Si.; Akbar Rizqi Kurniawan, M.Par."};
- s.otorisasi={dosenPengembang:"Akbar Rizqi Kurniawan, M.Par.",koordinator:"Lu'liyatul Mutmainah, S.E., M.Si.",unitMutu:"Gugus Penjaminan Mutu FAI",kaprodi:"Ketua Prodi Manajemen Mutu Halal"};
- s.profil=[{profil:"Praktisi Industri Pariwisata Halal",deskripsi:"Mampu mengelola dan mengembangkan destinasi serta layanan wisata halal."},{profil:"Konsultan & Auditor Halal",deskripsi:"Mampu mendampingi sertifikasi dan penjaminan mutu halal pada sektor pariwisata."}];
- s.cpl=[{kode:"CPL-5",kelompok:"Sikap",desc:"Menunjukkan sikap bertanggung jawab atas pekerjaan di bidang pariwisata halal secara mandiri sesuai nilai Islam."},{kode:"CPL-6",kelompok:"Pengetahuan",desc:"Menguasai konsep teoritis pariwisata halal, regulasi, dan sertifikasi secara mendalam."},{kode:"CPL-8",kelompok:"Keterampilan Umum",desc:"Mampu mengambil keputusan secara tepat berdasarkan analisis data dalam pengembangan destinasi wisata halal."},{kode:"CPL-10",kelompok:"Keterampilan Khusus",desc:"Mampu merancang strategi pemasaran dan pengelolaan destinasi wisata halal yang berdaya saing."}];
- s.cpmk=[{kode:"CPMK1",desc:"Mampu menjelaskan konsep, prinsip, dan ekosistem pariwisata halal.",cpl:["CPL-6"],bobot:"15"},{kode:"CPMK2",desc:"Mampu menganalisis regulasi, standar, dan proses sertifikasi pariwisata halal.",cpl:["CPL-6","CPL-8"],bobot:"20"},{kode:"CPMK3",desc:"Mampu mengevaluasi pengelolaan destinasi dan layanan wisata halal.",cpl:["CPL-8"],bobot:"20"},{kode:"CPMK4",desc:"Mampu merancang strategi pemasaran destinasi wisata halal.",cpl:["CPL-10"],bobot:"30"},{kode:"CPMK5",desc:"Menunjukkan sikap profesional dan tanggung jawab sesuai nilai syariah.",cpl:["CPL-5"],bobot:"15"}];
- s.subcpmk=[{kode:"Sub-1",level:"1",desc:"Mampu menjelaskan definisi, sejarah, dan ruang lingkup pariwisata halal.",cpmk:"CPMK1"},{kode:"Sub-2",level:"1",desc:"Mampu mengidentifikasi ekosistem dan pemangku kepentingan pariwisata halal.",cpmk:"CPMK1"},{kode:"Sub-3",level:"2",desc:"Mampu menganalisis regulasi nasional & global pariwisata halal.",cpmk:"CPMK2"},{kode:"Sub-4",level:"2",desc:"Mampu menjelaskan mekanisme sertifikasi halal sektor pariwisata.",cpmk:"CPMK2"},{kode:"Sub-5",level:"3",desc:"Mampu mengevaluasi manajemen destinasi wisata halal.",cpmk:"CPMK3"},{kode:"Sub-6",level:"3",desc:"Mampu mengevaluasi kualitas layanan (hotel, kuliner, transportasi) halal.",cpmk:"CPMK3"},{kode:"Sub-7",level:"4",desc:"Mampu menyusun analisis pasar wisata halal.",cpmk:"CPMK4"},{kode:"Sub-8",level:"4",desc:"Mampu merancang bauran pemasaran destinasi wisata halal.",cpmk:"CPMK4"},{kode:"Sub-9",level:"4",desc:"Mampu menyusun rencana strategi promosi digital wisata halal.",cpmk:"CPMK4"},{kode:"Sub-10",level:"4",desc:"Menunjukkan tanggung jawab & etika dalam proyek pengembangan wisata halal.",cpmk:"CPMK5"}];
- s.bahan=["Konsep & ruang lingkup pariwisata halal","Ekosistem dan pemangku kepentingan","Regulasi & standar (GMTI, DSN-MUI, BPJPH)","Sertifikasi halal sektor pariwisata","Manajemen destinasi wisata halal","Layanan halal: akomodasi, kuliner, transportasi","Analisis pasar & perilaku wisatawan muslim","Strategi pemasaran & promosi digital"];
- s.pUtama=["Battour, M. (2018). Muslim Travel Behavior in Halal Tourism. IntechOpen.","Jaelani, A. (2017). Halal Tourism Industry in Indonesia: Potential and Prospects. Munich.","Kementerian Pariwisata RI. (2019). Panduan Penyelenggaraan Pariwisata Halal."];
- s.pBuku=["CrescentRating & Mastercard. (2023). Global Muslim Travel Index (GMTI).","Jurnal terkait pariwisata halal (Scopus/Sinta)."];
- s.aiCapaian="Mampu merancang strategi pengelolaan dan pemasaran destinasi wisata halal yang berdaya saing (CPMK4).";
- s.aiRows=[{type:"stage",label:"Tahap 4 — Sintesis & Perancangan",boxes:["Sub-7: Analisis pasar wisata halal","Sub-8: Bauran pemasaran destinasi","Sub-9: Strategi promosi digital"]},{type:"divider",label:"UJIAN AKHIR SEMESTER (UAS)",boxes:[]},{type:"stage",label:"Tahap 3 — Evaluasi",boxes:["Sub-5: Evaluasi manajemen destinasi","Sub-6: Evaluasi kualitas layanan halal"]},{type:"divider",label:"UJIAN TENGAH SEMESTER (UTS)",boxes:[]},{type:"stage",label:"Tahap 2 — Analisis Regulasi",boxes:["Sub-3: Analisis regulasi","Sub-4: Mekanisme sertifikasi halal"]},{type:"stage",label:"Tahap 1 — Fondasi Konsep",boxes:["Sub-1: Konsep & ruang lingkup","Sub-2: Ekosistem & pemangku kepentingan"]}];
- var subSeq=["Sub-1","Sub-1","Sub-2","Sub-3","Sub-4","Sub-4","","","Sub-5","Sub-6","Sub-7","Sub-8","Sub-8","Sub-9","Sub-10",""];
- var mats=["Pengantar & kontrak; konsep pariwisata halal","Sejarah & ruang lingkup wisata halal","Ekosistem & pemangku kepentingan","Regulasi nasional & global (GMTI)","Sertifikasi halal: BPJPH & DSN-MUI","Studi kasus sertifikasi destinasi","","","Manajemen destinasi wisata halal","Kualitas layanan halal (hotel, kuliner)","Analisis pasar & perilaku wisatawan muslim","Bauran pemasaran (7P) destinasi halal","Branding destinasi wisata halal","Promosi digital & media sosial","Presentasi proyek pengembangan wisata halal",""];
- s.weeks=blankWeeks(16);s.weeks.forEach(function(w,i){var mg=i+1;w.sub=subSeq[i];w.mat=mats[i];if(mg===8){w.exam=true;w.mat="UJIAN TENGAH SEMESTER";w.bobot="20";}else if(mg===16){w.exam=true;w.mat="UJIAN AKHIR SEMESTER";w.bobot="30";}else{w.exam=false;w.ind=w.sub?"Ketepatan & kelengkapan "+w.sub:"";w.kri="Kriteria: rubrik; Bentuk: tes & non-tes";w.luring="Ceramah, diskusi";w.daring="LMS, video";w.bobot=({1:"3",2:"3",3:"4",4:"5",5:"5",6:"5",9:"5",10:"5",11:"5",12:"7",13:"5",14:"5",15:"8"})[mg]||"";}});
- s.metode={};s.subcpmk.forEach(function(sub){s.metode[sub.kode]={ceramah:true,diskusi:true,presentasi:sub.level>="3",caseStudy:sub.level>="2",pjbl:sub.level==="4"};});
- s.matnilai={};s.subcpmk.forEach(function(sub){s.matnilai[sub.kode]={tugas:true,kuis:sub.level<="2",uts:sub.level<="3",uas:sub.level>="3",proyI:sub.level==="4"};});
- s.tugas=[{sub:"Sub-4",ind:"Ketepatan analisis proses sertifikasi",bentuk:"Makalah studi kasus sertifikasi halal sebuah destinasi/hotel.",waktu:"2 minggu"},{sub:"Sub-6",ind:"Kelengkapan evaluasi layanan",bentuk:"Laporan observasi kualitas layanan halal.",waktu:"2 minggu"},{sub:"Sub-9",ind:"Kreativitas & kelayakan strategi",bentuk:"Proyek akhir: rancangan strategi pemasaran destinasi wisata halal + presentasi.",waktu:"4 minggu"}];
- s.nilai=[{k:"Partisipasi & Sikap",b:"15"},{k:"Tugas & Proyek",b:"30"},{k:"Ujian Tengah Semester (UTS)",b:"25"},{k:"Ujian Akhir Semester (UAS)",b:"30"}];
- s.rsikap=[{kriteria:"Tanggung Jawab",ex:"Selalu menyelesaikan tugas tepat waktu & berkualitas",av:"Umumnya menyelesaikan tugas",li:"Sering terlambat/tidak lengkap",p:"50"},{kriteria:"Kejujuran Akademik",ex:"Karya orisinal, mengutip dengan benar",av:"Sebagian besar orisinal",li:"Terindikasi plagiarisme",p:"50"}];
- s.rpart=[{kriteria:"Keaktifan Diskusi",ex:"Aktif & argumen berbobot",av:"Cukup aktif",li:"Pasif",p:"60"},{kriteria:"Kerja Sama Tim",ex:"Kolaboratif & kontributif",av:"Berkontribusi",li:"Kurang berkontribusi",p:"40"}];
- s.rubrik=[{judul:"Rubrik Proyek Akhir Strategi Pemasaran",target:"Tugas:3",skala:[{label:"Sangat Baik",score:"4"},{label:"Baik",score:"3"},{label:"Cukup",score:"2"},{label:"Kurang",score:"1"}],kriteria:[{nama:"Analisis Pasar",bobot:"25",desc:{0:"Analisis tajam, data lengkap & relevan",1:"Analisis baik, data cukup",2:"Analisis dangkal",3:"Tidak ada analisis"}},{nama:"Kelayakan Strategi",bobot:"35",desc:{0:"Strategi inovatif & sangat layak",1:"Strategi layak",2:"Strategi kurang relevan",3:"Strategi tidak layak"}},{nama:"Kesesuaian Syariah",bobot:"20",desc:{0:"Sepenuhnya sesuai prinsip halal",1:"Sebagian besar sesuai",2:"Beberapa tidak sesuai",3:"Tidak sesuai"}},{nama:"Presentasi",bobot:"20",desc:{0:"Komunikatif & meyakinkan",1:"Jelas",2:"Kurang jelas",3:"Tidak terstruktur"}}]}];
- s.kontrakCatatan="Kehadiran minimal 75% sebagai syarat mengikuti UAS. Keterlambatan maksimal 15 menit. Plagiarisme mengakibatkan nilai tugas nol. Penilaian mengacu pada rubrik yang telah disepakati.";
- s.kegiatan=s.weeks.map(function(w){return{ke:String(w.mg),kemampuan:w.sub?subLabel.call(null,w.sub):(w.exam?"Ujian":""),topik:w.mat,bahanAjar:[w.luring,w.daring].filter(Boolean).join(" | "),referensi:"Pustaka utama"};});
- return s;}
-$("#btnExample").addEventListener("click",function(){if(!confirm("Muat data contoh (Pariwisata Halal) ke mata kuliah aktif? Data saat ini akan ditimpa."))return;S=exampleState();var c=activeCourse();c.data=S;c.name=S.identitas.namaMK;persist();refreshCourseSel();bindAll();renderAll();switchView("identitas");toast("Data contoh dimuat.");});
-// ---------- Init ----------
+s.identitas={logo:"",kementerian:"Kementerian Pendidikan dan Kebudayaan",pt:"Universitas Siliwangi",fakultas:"Fakultas Agama Islam",prodi:"Manajemen Mutu Halal",alamat:"Jl. Siliwangi No. 24 Kota Tasikmalaya",namaMK:"Dasar-dasar Manajemen",namaMKen:"Fundamentals of Management",kodeMK:"KJ80206001",kodeDokumen:"",penyusun:"Listia Andani, M.E.",tahun:"2024",rumpun:"Mata Kuliah Program Studi",sksT:"3",sksP:"0",semester:"1",tglSusun:"Juli 2024",minggu:"16",prasyarat:"-",deskripsiID:"Mata kuliah ini membahas konsep dasar dan teori manajemen, perkembangan ilmu manajemen, lingkungan organisasi, pengambilan keputusan, serta fungsi-fungsi manajemen (perencanaan, pengorganisasian, kepemimpinan/penggerakan, dan pengendalian) dalam konteks organisasi dan industri halal.",deskripsiEN:"This course discusses the basic concepts and theories of management, the development of management science, the organizational environment, decision making, and the functions of management (planning, organizing, leading, and controlling) within organizations and the halal industry.",pendekatan:"Konstruktivisme",media:"WhatsApp Group (WAG), Google Classroom",pengampu:"Listia Andani, M.E."};
+s.otorisasi={dosenPengembang:"Listia Andani, M.E.",koordinator:"Listia Andani, M.E.",unitMutu:"",kaprodi:"Ketua Program Studi MMH"};
+s.profil=[{profil:"Praktisi Industri Halal",deskripsi:"Lulusan yang mampu menerapkan prinsip manajemen dalam pengelolaan organisasi dan industri halal secara profesional dan beretika."}];
+s.cpl=[{kode:"PLO 1",kelompok:"Attitude",desc:"Menunjukkan sikap bertanggung jawab atas pekerjaan di bidang keahliannya secara mandiri."},{kode:"PLO 2",kelompok:"General Skills",desc:"Mampu menerapkan pemikiran logis, kritis, sistematis, dan inovatif dalam konteks pengembangan ilmu pengetahuan dan teknologi."},{kode:"PLO 3",kelompok:"General Skills",desc:"Mampu mengkaji implikasi pengembangan ilmu pengetahuan sesuai keahliannya berdasarkan kaidah ilmiah."},{kode:"PLO 4",kelompok:"Knowledge",desc:"Menguasai konsep dasar dan teori manajemen serta penerapannya pada industri halal."},{kode:"PLO 5",kelompok:"Knowledge",desc:"Menguasai pengetahuan tentang fungsi-fungsi manajemen dalam organisasi."},{kode:"PLO 6",kelompok:"Knowledge",desc:"Menguasai konsep sains halal dan keterkaitannya dengan pengelolaan organisasi."},{kode:"PLO 7",kelompok:"Specific Skills",desc:"Mampu mengambil keputusan secara tepat dalam konteks penyelesaian masalah di bidang manajemen halal."},{kode:"PLO 8",kelompok:"Specific Skills",desc:"Mampu menerapkan fungsi-fungsi manajemen pada organisasi industri halal."},{kode:"PLO 9",kelompok:"Specific Skills",desc:"Mampu bekerja sama dan berkomunikasi secara efektif dalam tim kerja."}];
+s.cpmk=[{kode:"CPMK1",desc:"Mampu menerapkan pemikiran logis, kritis, dan sistematis dalam menganalisis persoalan manajemen.",cpl:["PLO 2"],bobot:"40"},{kode:"CPMK2",desc:"Mampu menjelaskan konsep dasar, teori, dan fungsi-fungsi manajemen serta penerapannya pada industri halal.",cpl:["PLO 4"],bobot:"60"}];
+s.subcpmk=[{kode:"Sub-CPMK-1",level:"1",desc:"Mampu memahami konsep dasar manajemen (C.2).",cpmk:"CPMK2"},{kode:"Sub-CPMK-2",level:"2",desc:"Mampu memahami dan menguraikan perkembangan ilmu manajemen (C.2; C.4).",cpmk:"CPMK2"},{kode:"Sub-CPMK-3",level:"3",desc:"Mampu menguraikan pendekatan dan lingkungan organisasi (C.4).",cpmk:"CPMK2"},{kode:"Sub-CPMK-4",level:"4",desc:"Mampu menguraikan proses pengambilan keputusan (C.4).",cpmk:"CPMK2"},{kode:"Sub-CPMK-5",level:"5",desc:"Mampu menguraikan fungsi-fungsi manajemen: perencanaan, pengorganisasian, kepemimpinan, pengendalian (C.4; C.3).",cpmk:"CPMK2"},{kode:"Sub-CPMK-6",level:"6",desc:"Mampu menguraikan evaluasi kinerja dan pengendalian organisasi (C.4; C.5).",cpmk:"CPMK2"}];
+s.bahan=[{id:"Konsep dasar manajemen",en:"Basic concepts of management"},{id:"Pengertian dan ruang lingkup manajemen",en:"Definition and scope of management"},{id:"Perkembangan ilmu manajemen",en:"The development of management science"},{id:"Aliran/teori manajemen",en:"Schools of management theory"},{id:"Pendekatan dalam manajemen",en:"Approaches in management"},{id:"Lingkungan organisasi",en:"Organizational environment"},{id:"Pengambilan keputusan",en:"Decision making"},{id:"Fungsi perencanaan",en:"Planning function"},{id:"Fungsi pengorganisasian",en:"Organizing function"},{id:"Fungsi kepemimpinan/penggerakan",en:"Leading function"},{id:"Fungsi pengendalian",en:"Controlling function"},{id:"Manajemen dalam industri halal",en:"Management in the halal industry"},{id:"Evaluasi kinerja organisasi",en:"Organizational performance evaluation"}];
+s.pUtama=["Robbins, S. P., & Coulter, M. (2021). Management (15th ed.). Pearson.","Daft, R. L. (2018). Management (13th ed.). Cengage Learning.","Griffin, R. W. (2017). Management (12th ed.). Cengage Learning.","Stoner, J. A. F., Freeman, R. E., & Gilbert, D. R. (2008). Management. Prentice Hall.","Handoko, T. H. (2015). Manajemen (Edisi 2). BPFE Yogyakarta.","Hasibuan, M. S. P. (2016). Manajemen: Dasar, Pengertian, dan Masalah. Bumi Aksara.","Terry, G. R. (2012). Prinsip-Prinsip Manajemen. Bumi Aksara.","Siagian, S. P. (2014). Fungsi-Fungsi Manajerial. Bumi Aksara.","Wijayanto, D. (2012). Pengantar Manajemen. Gramedia.","Sule, E. T., & Saefullah, K. (2019). Pengantar Manajemen. Prenadamedia.","Solihin, I. (2009). Pengantar Manajemen. Erlangga."];
+s.pBuku=[];
+s.aiCapaian="Mahasiswa mampu menjelaskan konsep dasar, teori, dan fungsi-fungsi manajemen serta penerapannya pada organisasi dan industri halal.";
+s.aiRows=[{type:"divider",label:"UJIAN AKHIR SEMESTER (UAS)"},{type:"stage",label:"Pertemuan 14 – 15",boxes:["Mampu menguraikan evaluasi kinerja dan pengendalian organisasi (Sub-CPMK-6)"]},{type:"stage",label:"Pertemuan 9 – 13",boxes:["Mampu menguraikan fungsi-fungsi manajemen: perencanaan, pengorganisasian, kepemimpinan, pengendalian (Sub-CPMK-5)"]},{type:"divider",label:"UJIAN TENGAH SEMESTER (UTS)"},{type:"stage",label:"Pertemuan 6 – 7",boxes:["Mampu menguraikan proses pengambilan keputusan (Sub-CPMK-4)"]},{type:"stage",label:"Pertemuan 4 – 5",boxes:["Mampu menguraikan pendekatan dan lingkungan organisasi (Sub-CPMK-3)"]},{type:"stage",label:"Pertemuan 3",boxes:["Mampu memahami dan menguraikan perkembangan ilmu manajemen (Sub-CPMK-2)"]},{type:"stage",label:"Pertemuan 1 – 2",boxes:["Mampu memahami konsep dasar manajemen (Sub-CPMK-1)"]}];
+var wmap=[[1,"Sub-CPMK-1","Kontrak kuliah; Konsep dasar manajemen","Course contract; Basic concepts of management",7],[2,"Sub-CPMK-1","Pengertian, unsur, dan ruang lingkup manajemen","Definition, elements, and scope of management",7],[3,"Sub-CPMK-2","Perkembangan ilmu manajemen & aliran/teori manajemen","Development of management science & schools of thought",7],[4,"Sub-CPMK-3","Pendekatan dalam manajemen","Approaches in management",7],[5,"Sub-CPMK-3","Lingkungan organisasi (internal & eksternal)","Organizational environment (internal & external)",7],[6,"Sub-CPMK-4","Proses pengambilan keputusan","The decision making process",7],[7,"Sub-CPMK-4","Teknik & gaya pengambilan keputusan","Decision making techniques & styles",8],[9,"Sub-CPMK-5","Fungsi perencanaan (planning)","Planning function",7],[10,"Sub-CPMK-5","Fungsi pengorganisasian (organizing)","Organizing function",7],[11,"Sub-CPMK-5","Fungsi kepemimpinan/penggerakan (leading)","Leading function",7],[12,"Sub-CPMK-5","Fungsi pengendalian (controlling)","Controlling function",7],[13,"Sub-CPMK-5","Penerapan fungsi manajemen pada industri halal","Application of management functions in the halal industry",6],[14,"Sub-CPMK-6","Evaluasi kinerja organisasi","Organizational performance evaluation",7],[15,"Sub-CPMK-6","Pengendalian & perbaikan berkelanjutan","Control & continuous improvement",8]];
+s.weeks=blankWeeks(16);s.weeks.forEach(function(w){var m=wmap.filter(function(x){return x[0]===w.mg;})[0];if(m){w.sub=m[1];w.mat=m[2];w.matEN=m[3];w.bobot=m[4];w.ind="Ketepatan menjelaskan & menganalisis materi";w.kri="Kriteria: rubrik; Bentuk: tes & non-tes";w.luring="Ceramah, diskusi (TM: 3x50')";w.daring="Diskusi via Google Classroom";w.exam=false;}});
+s.weeks[7].mat="Ujian Tengah Semester (UTS)";s.weeks[7].exam=true;s.weeks[15].mat="Ujian Akhir Semester (UAS)";s.weeks[15].exam=true;
+s.metode={};s.subcpmk.forEach(function(sub){s.metode[sub.kode]={ceramah:true,diskusi:true,presentasi:true,penguatan:true,caseStudy:(sub.level>="4")};});
+s.matnilai={};s.subcpmk.forEach(function(sub){s.matnilai[sub.kode]={partI:true,tugas:true,uts:(sub.level<="4"),uas:(sub.level>="5")};});
+s.kegiatan=[{ke:"1 & 2",sub:"Sub-CPMK-1",topik:"Kontrak kuliah\nKonsep dasar manajemen\nPengertian & ruang lingkup manajemen",topikEN:"Course contract\nBasic concepts of management\nDefinition & scope of management",bentuk:"Tatap muka",model:"Pembelajaran Kolaboratif",metode:"Ceramah, Diskusi",sintak:"Dosen menyampaikan kontrak & tujuan pembelajaran\nMahasiswa berdiskusi tentang konsep dasar manajemen\nMahasiswa menyusun resume materi",bahanAjar:"PPT (di-share pada Google Classroom)",penilaian:"Membuat resume materi kuliah",referensi:"Robbins & Coulter (2021)\nHandoko (2015)"},{ke:"3",sub:"Sub-CPMK-2",topik:"Perkembangan ilmu manajemen\nAliran/teori manajemen",topikEN:"Development of management science\nSchools of management theory",bentuk:"Tatap muka",model:"Pembelajaran Kolaboratif",metode:"Ceramah, Diskusi, Presentasi",sintak:"Mahasiswa membaca materi sebelum kelas\nPresentasi kelompok\nPenguatan oleh dosen",bahanAjar:"PPT, artikel ilmiah",penilaian:"Presentasi kelompok",referensi:"Daft (2018)\nGriffin (2017)"},{ke:"4 & 5",sub:"Sub-CPMK-3",topik:"Pendekatan dalam manajemen\nLingkungan organisasi",topikEN:"Approaches in management\nOrganizational environment",bentuk:"Tatap muka",model:"Case Study",metode:"Ceramah, Diskusi, Studi Kasus",sintak:"Dosen menyajikan kasus\nDiskusi kelompok menganalisis lingkungan organisasi\nPresentasi hasil",bahanAjar:"PPT, studi kasus",penilaian:"Analisis kasus",referensi:"Stoner et al. (2008)"},{ke:"6 & 7",sub:"Sub-CPMK-4",topik:"Proses pengambilan keputusan\nTeknik & gaya pengambilan keputusan",topikEN:"Decision making process\nDecision making techniques & styles",bentuk:"Tatap muka",model:"Problem Based Learning",metode:"Diskusi, Studi Kasus",sintak:"Identifikasi masalah\nAnalisis alternatif\nPengambilan keputusan & evaluasi",bahanAjar:"PPT, lembar kasus",penilaian:"Tugas pengambilan keputusan",referensi:"Robbins & Coulter (2021)"},{ke:"9 – 13",sub:"Sub-CPMK-5",topik:"Perencanaan\nPengorganisasian\nKepemimpinan/Penggerakan\nPengendalian\nPenerapan pada industri halal",topikEN:"Planning\nOrganizing\nLeading\nControlling\nApplication in the halal industry",bentuk:"Tatap muka",model:"Pembelajaran Kolaboratif",metode:"Ceramah, Diskusi, Presentasi",sintak:"Pemaparan fungsi manajemen\nDiskusi penerapan\nProyek mini kelompok",bahanAjar:"PPT, modul",penilaian:"Proyek kelompok & tugas",referensi:"Handoko (2015)\nSule & Saefullah (2019)"},{ke:"14 & 15",sub:"Sub-CPMK-6",topik:"Evaluasi kinerja organisasi\nPengendalian & perbaikan berkelanjutan",topikEN:"Organizational performance evaluation\nControl & continuous improvement",bentuk:"Tatap muka",model:"Case Study",metode:"Diskusi, Presentasi, Penguatan",sintak:"Analisis indikator kinerja\nDiskusi perbaikan berkelanjutan\nPresentasi akhir",bahanAjar:"PPT, studi kasus",penilaian:"Presentasi & laporan",referensi:"Daft (2018)"}];
+s.tugas=[{sub:"Sub-CPMK-1",ind:"Ketepatan menjelaskan konsep dasar manajemen",bentuk:"Resume materi konsep dasar manajemen",waktu:"Pertemuan 2"},{sub:"Sub-CPMK-2",ind:"Ketepatan menguraikan perkembangan ilmu manajemen",bentuk:"Makalah & presentasi kelompok",waktu:"Pertemuan 3"},{sub:"Sub-CPMK-3",ind:"Ketepatan menganalisis lingkungan organisasi",bentuk:"Analisis studi kasus",waktu:"Pertemuan 5"},{sub:"Sub-CPMK-4",ind:"Ketepatan proses pengambilan keputusan",bentuk:"Tugas pengambilan keputusan",waktu:"Pertemuan 7"},{sub:"Sub-CPMK-5",ind:"Ketepatan menerapkan fungsi manajemen",bentuk:"Proyek mini kelompok",waktu:"Pertemuan 13"},{sub:"Sub-CPMK-6",ind:"Ketepatan mengevaluasi kinerja organisasi",bentuk:"Laporan & presentasi akhir",waktu:"Pertemuan 15"}];
+s.nilai=[{basis:"Aktivitas Partisipatif",komponen:"Mahasiswa membahas & menganalisis studi kasus secara berkelompok",kisaran:"60 – 100",bobot:"60",descID:"Penilaian terhadap keaktifan, kontribusi, dan kerja sama mahasiswa dalam diskusi dan kerja kelompok.",descEN:"Assessment of students' activeness, contribution, and collaboration in discussions and group work."},{basis:"Kognitif / Pengetahuan",komponen:"Tugas",kisaran:"60 – 100",bobot:"10",descID:"Penilaian terhadap ketepatan & kualitas penyelesaian tugas.",descEN:"Assessment of the accuracy and quality of assignment completion."},{basis:"Kognitif / Pengetahuan",komponen:"Ujian Tengah Semester (UTS)",kisaran:"0 – 100",bobot:"15",descID:"Penilaian penguasaan materi paruh pertama semester.",descEN:"Assessment of mastery of the first half of the semester material."},{basis:"Kognitif / Pengetahuan",komponen:"Ujian Akhir Semester (UAS)",kisaran:"0 – 100",bobot:"15",descID:"Penilaian penguasaan materi paruh kedua semester.",descEN:"Assessment of mastery of the second half of the semester material."}];
+s.rsikap=[{kriteria:"Disiplin",ex:"Selalu hadir & tepat waktu",av:"Kadang terlambat",li:"Sering terlambat/absen",p:"1"},{kriteria:"Tanggung jawab",ex:"Menyelesaikan tugas dengan baik & tepat waktu",av:"Menyelesaikan tugas namun terlambat",li:"Tidak menyelesaikan tugas",p:"1"},{kriteria:"Toleran",ex:"Menghargai pendapat orang lain",av:"Cukup menghargai pendapat",li:"Kurang menghargai pendapat",p:"2"},{kriteria:"Santun",ex:"Berkomunikasi dengan sangat santun",av:"Cukup santun",li:"Kurang santun",p:"3"}];
+s.rpart=[{kriteria:"Menyimak",ex:"Selalu menyimak dengan baik",av:"Cukup menyimak",li:"Kurang menyimak",p:"10"},{kriteria:"Aktif bertanya",ex:"Sering bertanya & berkontribusi",av:"Kadang bertanya",li:"Jarang bertanya",p:"10"},{kriteria:"Merespon tugas",ex:"Selalu merespon tugas dengan baik",av:"Cukup merespon",li:"Kurang merespon",p:"10"}];
+s.kontrakCatatan="1. Kehadiran minimal 75% sebagai syarat mengikuti UAS.\n2. Keterlambatan ditoleransi maksimal 15 menit.\n3. Plagiarisme dalam tugas akan dikenai sanksi nilai nol.\n4. Mahasiswa wajib berpakaian rapi dan sopan selama perkuliahan.";
+return s;}
 restore();refreshCourseSel();bindAll();renderAll();switchView("identitas");
 </script>
 </body>
